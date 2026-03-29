@@ -550,4 +550,70 @@ const completeAndBack = () => {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 760px) {
+  .page {
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+  }
+
+  .workspace {
+    margin-top: var(--space-2);
+    gap: var(--space-2);
+  }
+
+  .panel {
+    padding: var(--space-2);
+  }
+
+  .editor-head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .focus-toggle {
+    width: 100%;
+    min-height: 40px;
+  }
+
+  .answer,
+  .hint,
+  .retry-note {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  :deep(.cm-editor) {
+    font-size: 13px;
+  }
+
+  .editor-loading {
+    height: 380px;
+  }
+}
+
+@media (max-width: 430px) {
+  .page {
+    padding: var(--space-2);
+  }
+
+  .panel-title {
+    font-size: 12px;
+    margin-bottom: var(--space-2);
+  }
+
+  .problem,
+  .retry-note {
+    font-size: 12px;
+  }
+
+  .answer,
+  .hint {
+    padding: var(--space-2);
+  }
+
+  :deep(.cm-editor) {
+    min-height: 360px;
+  }
+}
 </style>

@@ -75,6 +75,37 @@ const emit = defineEmits(['complete'])
 @media (max-width: 760px) {
   .topbar {
     grid-template-columns: 1fr;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .back-link {
+    font-size: 13px;
+  }
+
+  .title-wrap h1 {
+    font-size: clamp(20px, 5.4vw, 26px);
+  }
+
+  .done-button {
+    width: 100%;
+    min-height: 42px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 430px) {
+  .topbar {
+    padding: 8px;
+  }
+
+  .title-wrap h1 {
+    line-height: 1.22;
+    font-size: 20px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
   }
 }
 </style>

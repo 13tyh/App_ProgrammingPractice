@@ -413,4 +413,36 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
   }
 }
 
+@media (max-width: 430px) {
+  .sidebar {
+    padding: var(--space-2);
+  }
+
+  .summary-value {
+    font-size: 24px;
+  }
+
+  .goal-ring {
+    width: 50px;
+    height: 50px;
+  }
+
+  .goal-ring::after {
+    inset: 5px;
+  }
+
+  .daily-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .daily-item {
+    padding: 5px 2px;
+  }
+
+  .level-button,
+  .clear-button {
+    min-height: 38px;
+  }
+}
+
 </style>

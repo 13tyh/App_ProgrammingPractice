@@ -294,4 +294,34 @@ const listItems = computed(() =>
     flex: 1;
   }
 }
+
+@media (max-width: 430px) {
+  .content {
+    padding: var(--space-2);
+  }
+
+  .content-head h2 {
+    font-size: 20px;
+  }
+
+  .content-head p {
+    font-size: 12px;
+  }
+
+  .task-item {
+    padding: var(--space-2);
+  }
+
+  .item-main h3 {
+    font-size: 18px;
+  }
+
+  .item-main p {
+    font-size: 13px;
+  }
+
+  .item-actions {
+    flex-direction: column;
+  }
+}
 </style>

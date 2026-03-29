@@ -55,7 +55,7 @@ const pendingScriptRequests = new Map()
 
 const validateExecutableSource = (source) => {
   if (source.length > MAX_EXEC_SOURCE_LENGTH) {
-    return `コード量が上限（${MAX_EXEC_SOURCE_LENGTH}文字）を超えています。` 
+    return `コード量が上限（${MAX_EXEC_SOURCE_LENGTH}文字）を超えています。`
   }
 
   const blocked = BLOCKED_EXEC_PATTERNS.find((item) => item.pattern.test(source))
@@ -660,6 +660,78 @@ const completeAndBack = () => {
 @media (max-width: 1200px) {
   .workspace {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+  }
+
+  .workspace {
+    margin-top: var(--space-2);
+    gap: var(--space-2);
+  }
+
+  .panel {
+    padding: var(--space-2);
+  }
+
+  .editor-head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .focus-toggle {
+    width: 100%;
+    min-height: 40px;
+  }
+
+  .answer,
+  .log-box,
+  .hint {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .context-group ul,
+  .inline-list {
+    padding-left: 16px;
+  }
+
+  :deep(.cm-editor) {
+    font-size: 13px;
+  }
+
+  .editor-loading {
+    height: 380px;
+  }
+}
+
+@media (max-width: 430px) {
+  .page {
+    padding: var(--space-2);
+  }
+
+  .panel-title {
+    font-size: 12px;
+    margin-bottom: var(--space-2);
+  }
+
+  .problem,
+  .context-note,
+  .context-group li {
+    font-size: 12px;
+  }
+
+  .answer,
+  .log-box {
+    padding: var(--space-2);
+  }
+
+  :deep(.cm-editor) {
+    min-height: 360px;
   }
 }
 </style>

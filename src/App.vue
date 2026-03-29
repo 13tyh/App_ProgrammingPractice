@@ -86,11 +86,56 @@
   .app-header {
     grid-template-columns: 1fr;
     justify-items: start;
+    padding: var(--space-3);
   }
 
   .course-nav {
     justify-content: flex-start;
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    gap: var(--space-2);
+    border-radius: var(--radius-md);
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .course-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .course-nav a {
+    text-align: center;
+    padding: 9px 8px;
+    font-size: 13px;
+  }
+
+  .app-main {
+    padding: 8px 2px 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .app-header {
+    padding: 8px;
+  }
+
+  .course-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .course-nav a {
+    min-height: 40px;
+    display: grid;
+    place-items: center;
   }
 }
 </style>
