@@ -8,24 +8,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "countの初期値は0とする",
-        "1クリックごとに+1のみ行う"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "初期表示: 0, 1回クリック後: 1"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "減算ボタンやリセット機能は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 2,
@@ -36,27 +19,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "消費税率は 10%（taxRate = 0.1）で固定する",
-        "税込み金額は小数点以下を切り捨てる（Math.floor）",
-        "初期価格は price = 1000 を利用する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "price = 1000 のとき taxIncluded = 1100",
-        "price = 1980 のとき taxIncluded = 2178"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "軽減税率など複数税率の考慮は不要",
-        "通貨フォーマット（3桁区切り）対応は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 3,
@@ -67,24 +30,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "nameの初期値は空文字とする",
-        "v-modelで双方向バインドする"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "inputに \"Vue\" と入力したら下段表示も \"Vue\""
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "バリデーションやtrim処理は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 4,
@@ -95,24 +41,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "starterのtodos配列をそのまま利用する",
-        "keyはtodo.idを使う"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "2件のliが順番どおり表示される"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "削除・追加処理の実装は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 5,
@@ -123,24 +52,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "isLoading=trueでLoading, falseでDoneを表示する",
-        "同時表示はしない"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "isLoading=falseならDoneのみ表示"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "ローディングの実時間制御は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 6,
@@ -151,24 +63,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "watch対象はkeywordのみ",
-        "ログ出力はnewValueを使う"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "keywordがabcに変わった時 consoleにabcを出力"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "API連携やdebounceは不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 7,
@@ -179,24 +74,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "watchEffectは初回実行される前提",
-        "count.value参照で依存登録する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "count変更のたびに最新値が出力される"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "停止処理(onInvalidate)は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 8,
@@ -207,24 +85,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "nameはString, ageはNumberで受け取る",
-        "templateでprops経由表示する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "name=Taro, age=20で \"Taro (20)\" 表示"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "propsの厳密バリデーションは不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 9,
@@ -235,24 +96,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "イベント名はsubmit固定",
-        "payloadは{ ok: true }固定"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "送信ボタン押下でsubmitイベント1回発火"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "API送信や多重クリック防止は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 10,
@@ -263,24 +107,7 @@ export const vueTasksList = [
     "duration": "16分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "onMountedで1回のみ取得する",
-        "レスポンスはjsonとしてprofileへ代入する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "onMounted後にprofile.valueがオブジェクトになる"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "エラーUIとリトライ処理は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 11,
@@ -291,24 +118,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "検索は大文字小文字を区別しない",
-        "部分一致(includes)で判定する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "keyword=taでTaroが残る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "日本語かな漢字変換の曖昧検索は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 12,
@@ -319,24 +129,7 @@ export const vueTasksList = [
     "duration": "18分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "submitは@submit.preventで発火する",
-        "POST bodyはname/emailの2項目のみ"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "送信時にapplication/jsonでPOSTされる"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "入力バリデーションとトースト表示は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 13,
@@ -347,24 +140,7 @@ export const vueTasksList = [
     "duration": "16分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "provideキーはtheme固定",
-        "injectのデフォルトはlight"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "provideありならdark, なしならlight"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "階層コンポーネント分割の実装は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 14,
@@ -375,24 +151,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 1,
     "mutationWarningShort": "破壊的操作あり",
-    "mutationWarningLevel": "high",
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "遷移先は/js-practice固定",
-        "useRouter().pushを使う"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "Go押下で/js-practiceへ遷移"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "遷移前確認ダイアログは不要"
-      ]
-    }
+    "mutationWarningLevel": "high"
   },
   {
     "id": 15,
@@ -403,24 +162,7 @@ export const vueTasksList = [
     "duration": "20分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "load開始時にloading=true/error初期化する",
-        "finallyで必ずloading=falseに戻す"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "成功時:data更新, 失敗時:error更新, 最終的にloading=false"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "再試行ボタンや指数バックオフは不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 16,
@@ -431,24 +173,7 @@ export const vueTasksList = [
     "duration": "22分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "keywordは小文字比較で検索",
-        "並び順はprice昇順固定"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "A:300, B:100 なら visibleProductsはB,A順"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "降順切替や複合ソートは不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 17,
@@ -459,24 +184,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "クリック式はcount++でよい",
-        "表示文言はCount: {{ count }}を維持する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "初期0, 2回クリックで2"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "別メソッド化やcomputed化は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 18,
@@ -487,24 +195,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "formはreactiveで1オブジェクトにまとめる",
-        "rememberの初期値はfalse"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "email/passwordは空文字で開始"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "送信処理の実装は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 19,
@@ -515,24 +206,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": "破壊的操作あり",
-    "mutationWarningLevel": "high",
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "参照維持のため再代入せずObject.assignを使う",
-        "更新対象はemailのみ"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "password値は保持されたままemailだけ変更"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "部分更新ヘルパー関数化は不要"
-      ]
-    }
+    "mutationWarningLevel": "high"
   },
   {
     "id": 20,
@@ -543,24 +217,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "fullNameは\"姓 名\"の順で結合する",
-        "スペース1つで連結する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "Yamada + Taro => \"Yamada Taro\""
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "ミドルネーム対応は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 21,
@@ -571,24 +228,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "watchコールバックはasyncで記述する",
-        "keyword変更ごとに検索APIを呼ぶ"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "keyword更新時に/api/search?q=...を呼び出し"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "キャンセル制御とdebounceは不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 22,
@@ -599,24 +239,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "イベント名はlike固定",
-        "クリック時にemit(\"like\")を直接呼ぶ"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "Likeボタン押下でlikeイベント1回発火"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "二重いいね防止は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 23,
@@ -627,24 +250,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "propsはmodelValue/labelを受ける",
-        "入力時にupdate:modelValueをemitする"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "入力 \"abc\" でemit(\"update:modelValue\", \"abc\")"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "IME最適化や遅延更新は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 24,
@@ -655,24 +261,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "titleは必須props",
-        "本文はdefault slotで受ける"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "title表示 + slot内容表示の2領域構成"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "header/footerのnamed slotは不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 25,
@@ -683,24 +272,7 @@ export const vueTasksList = [
     "duration": "18分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "fetchUsersはasync関数で定義する",
-        "onMounted(fetchUsers)で初回取得する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "開始時loading=true, 終了時loading=false"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "ページングやキャッシュは不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 26,
@@ -711,24 +283,7 @@ export const vueTasksList = [
     "duration": "22分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "debounce時間は300ms固定",
-        "requestId一致時のみ結果反映する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "後発リクエストのみresultsを更新"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "AbortController実装は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 27,
@@ -739,24 +294,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "openはref(false)で管理",
-        "closeイベントでfalseへ戻す"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "Open押下で表示, closeで非表示"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "フォーカストラップ実装は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 28,
@@ -767,24 +305,7 @@ export const vueTasksList = [
     "duration": "18分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "送信中フラグはsubmittingで一元管理",
-        "finallyで必ずsubmitting=false"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "成功時success=true, 失敗時error文字列設定"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "フィールド単位エラー表示は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 29,
@@ -795,24 +316,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "初期値はroute.query.keywordを使う",
-        "更新はrouter.replaceで履歴を汚さない"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "keyword空文字ならqueryから削除(undefined)"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "双方向同期の循環防止ロジックは不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 30,
@@ -823,24 +327,7 @@ export const vueTasksList = [
     "duration": "20分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "store名はauth固定",
-        "isLoggedInはuserの真偽で判定する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "login後 user/tokenセット, logoutで両方null"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "永続化(localStorage)は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 31,
@@ -851,24 +338,7 @@ export const vueTasksList = [
     "duration": "20分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "初期page=1,pageSize=20",
-        "watchはimmediate:trueで初回取得する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "total=95,pageSize=20 => totalPages=5"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "サーバーエラー処理は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 32,
@@ -879,24 +349,7 @@ export const vueTasksList = [
     "duration": "18分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "tempIdで即時反映し先頭挿入する",
-        "失敗時はtempId項目を除外してロールバック"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "成功時temp行がcreatedへ置換される"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "再試行キューは不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 33,
@@ -907,24 +360,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "storage keyはdraft:profileを使う",
-        "watchで変更ごとに即保存する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "draft入力更新でlocalStorage値も更新"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "保存頻度の間引き(throttle)は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 34,
@@ -935,24 +371,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "requiresAuth=true かつ未ログインで/loginへ遷移",
-        "redirectにto.fullPathを保持する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "保護ページアクセス時に/login?redirect=...へ"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "ロール権限制御は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 35,
@@ -963,24 +382,7 @@ export const vueTasksList = [
     "duration": "16分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "execute開始でloading=true,error=null",
-        "finallyでloading=falseに戻す"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "成功時data更新, 失敗時error更新"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "自動再実行(auto fetch)は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 36,
@@ -991,24 +393,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "formはreactive、loading/errorはrefで管理",
-        "submit内でtry/catch/finallyを使う"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "submit開始でloading=true, 終了でfalse"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "remember meや2FA対応は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 37,
@@ -1019,24 +404,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
-        "showDone=trueなら全件表示",
-        "falseならdone=falseのみ表示"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る",
-        "showDone=false時に未完了タスクのみvisibleTasksへ残る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外",
-        "並び替えや検索の同時対応は不要"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 38,
@@ -1047,20 +415,7 @@ export const vueTasksList = [
     "duration": "16分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 39,
@@ -1071,20 +426,7 @@ export const vueTasksList = [
     "duration": "16分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 40,
@@ -1095,20 +437,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 41,
@@ -1119,20 +448,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 42,
@@ -1143,20 +459,7 @@ export const vueTasksList = [
     "duration": "18分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 43,
@@ -1167,20 +470,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 44,
@@ -1191,20 +481,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 45,
@@ -1215,20 +492,7 @@ export const vueTasksList = [
     "duration": "16分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 46,
@@ -1239,20 +503,7 @@ export const vueTasksList = [
     "duration": "16分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 47,
@@ -1263,20 +514,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 48,
@@ -1287,20 +525,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 49,
@@ -1311,20 +536,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 50,
@@ -1335,20 +547,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 51,
@@ -1359,20 +558,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 52,
@@ -1383,20 +569,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 53,
@@ -1407,20 +580,7 @@ export const vueTasksList = [
     "duration": "16分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 54,
@@ -1431,20 +591,7 @@ export const vueTasksList = [
     "duration": "18分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 55,
@@ -1455,20 +602,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 56,
@@ -1479,20 +613,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 57,
@@ -1503,20 +624,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 58,
@@ -1527,20 +635,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 59,
@@ -1551,20 +646,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 60,
@@ -1575,20 +657,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 61,
@@ -1599,20 +668,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 1,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 62,
@@ -1623,20 +679,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 63,
@@ -1647,20 +690,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 64,
@@ -1671,20 +701,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 65,
@@ -1695,20 +712,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 66,
@@ -1719,20 +723,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 67,
@@ -1743,20 +734,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 68,
@@ -1767,20 +745,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 69,
@@ -1791,20 +756,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 70,
@@ -1815,20 +767,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 71,
@@ -1839,20 +778,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": "破壊的操作あり",
-    "mutationWarningLevel": "high",
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": "high"
   },
   {
     "id": 72,
@@ -1863,20 +789,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 73,
@@ -1887,20 +800,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 74,
@@ -1911,20 +811,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 75,
@@ -1935,20 +822,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 76,
@@ -1959,20 +833,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 77,
@@ -1983,20 +844,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 78,
@@ -2007,20 +855,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 79,
@@ -2031,20 +866,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 80,
@@ -2055,20 +877,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 81,
@@ -2079,20 +888,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 82,
@@ -2103,20 +899,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 83,
@@ -2127,20 +910,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 84,
@@ -2151,20 +921,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 85,
@@ -2175,20 +932,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 86,
@@ -2199,20 +943,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 87,
@@ -2223,20 +954,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 88,
@@ -2247,20 +965,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": "破壊的操作あり",
-    "mutationWarningLevel": "high",
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": "high"
   },
   {
     "id": 89,
@@ -2271,20 +976,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 90,
@@ -2295,20 +987,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 2,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 91,
@@ -2319,20 +998,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 92,
@@ -2343,20 +1009,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 93,
@@ -2367,20 +1020,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 94,
@@ -2391,20 +1031,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 95,
@@ -2415,20 +1042,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 96,
@@ -2439,20 +1053,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 97,
@@ -2463,20 +1064,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 98,
@@ -2487,20 +1075,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 99,
@@ -2511,20 +1086,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 100,
@@ -2535,20 +1097,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 101,
@@ -2559,20 +1108,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 102,
@@ -2583,20 +1119,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 103,
@@ -2607,20 +1130,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 104,
@@ -2631,20 +1141,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 105,
@@ -2655,20 +1152,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 106,
@@ -2679,20 +1163,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 107,
@@ -2703,20 +1174,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 108,
@@ -2727,20 +1185,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 109,
@@ -2751,20 +1196,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 110,
@@ -2775,20 +1207,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 111,
@@ -2799,20 +1218,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 112,
@@ -2823,20 +1229,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 113,
@@ -2847,20 +1240,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 114,
@@ -2871,20 +1251,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 115,
@@ -2895,20 +1262,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 116,
@@ -2919,20 +1273,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 117,
@@ -2943,20 +1284,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 118,
@@ -2967,20 +1295,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 3,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 119,
@@ -2991,20 +1306,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 120,
@@ -3015,20 +1317,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 121,
@@ -3039,20 +1328,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 122,
@@ -3063,20 +1339,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 123,
@@ -3087,20 +1350,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 124,
@@ -3111,20 +1361,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 125,
@@ -3135,20 +1372,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 126,
@@ -3159,20 +1383,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 127,
@@ -3183,20 +1394,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 128,
@@ -3207,20 +1405,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 129,
@@ -3231,20 +1416,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 130,
@@ -3255,20 +1427,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 131,
@@ -3279,20 +1438,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 132,
@@ -3303,20 +1449,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 133,
@@ -3327,20 +1460,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 134,
@@ -3351,20 +1471,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 135,
@@ -3375,20 +1482,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 136,
@@ -3399,20 +1493,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 137,
@@ -3423,20 +1504,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 138,
@@ -3447,20 +1515,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 139,
@@ -3471,20 +1526,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 140,
@@ -3495,20 +1537,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 141,
@@ -3519,20 +1548,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 142,
@@ -3543,20 +1559,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 143,
@@ -3567,20 +1570,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 144,
@@ -3591,20 +1581,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 145,
@@ -3615,20 +1592,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 146,
@@ -3639,20 +1603,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 4,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 147,
@@ -3663,20 +1614,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 148,
@@ -3687,20 +1625,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 149,
@@ -3711,20 +1636,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 150,
@@ -3735,20 +1647,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 151,
@@ -3759,20 +1658,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 152,
@@ -3783,20 +1669,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 153,
@@ -3807,20 +1680,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 154,
@@ -3831,20 +1691,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 155,
@@ -3855,20 +1702,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 156,
@@ -3879,20 +1713,7 @@ export const vueTasksList = [
     "duration": "8分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 157,
@@ -3903,20 +1724,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 158,
@@ -3927,20 +1735,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 159,
@@ -3951,20 +1746,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 160,
@@ -3975,20 +1757,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 161,
@@ -3999,20 +1768,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 5,
     "mutationWarningShort": "破壊的操作あり",
-    "mutationWarningLevel": "high",
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": "high"
   },
   {
     "id": 162,
@@ -4023,20 +1779,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 163,
@@ -4047,20 +1790,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 164,
@@ -4071,20 +1801,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 165,
@@ -4095,20 +1812,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 166,
@@ -4119,20 +1823,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 167,
@@ -4143,20 +1834,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 168,
@@ -4167,20 +1845,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 169,
@@ -4191,20 +1856,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 170,
@@ -4215,20 +1867,7 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 171,
@@ -4239,20 +1878,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 172,
@@ -4263,20 +1889,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 173,
@@ -4287,20 +1900,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 174,
@@ -4311,20 +1911,7 @@ export const vueTasksList = [
     "duration": "10分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 175,
@@ -4335,20 +1922,7 @@ export const vueTasksList = [
     "duration": "16分",
     "starDifficulty": 5,
     "mutationWarningShort": "破壊的操作あり",
-    "mutationWarningLevel": "high",
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": "high"
   },
   {
     "id": 176,
@@ -4359,20 +1933,7 @@ export const vueTasksList = [
     "duration": "14分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   },
   {
     "id": 177,
@@ -4383,19 +1944,6 @@ export const vueTasksList = [
     "duration": "12分",
     "starDifficulty": 5,
     "mutationWarningShort": null,
-    "mutationWarningLevel": null,
-    "spec": {
-      "assumptions": [
-        "問題文にない値は starter / answer の初期値を採用する",
-        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
-      ],
-      "ioExamples": [
-        "チェックボタン押下時に必須トークンが確認できる状態にする",
-        "リセット後は starter と同じ状態へ戻る"
-      ],
-      "outOfScope": [
-        "UIデザインの作り込みは評価対象外"
-      ]
-    }
+    "mutationWarningLevel": null
   }
 ]

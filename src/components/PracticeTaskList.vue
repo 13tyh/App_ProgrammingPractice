@@ -1,9 +1,11 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import CompletionToggleButton from './CompletionToggleButton.vue'
 import MutationWarningBanner from './MutationWarningBanner.vue'
 import TaskMetaRow from './TaskMetaRow.vue'
+
+const PAGE_SIZE = 24
 
 const props = defineProps({
   displayTasks: { type: Array, required: true },
@@ -32,6 +34,7 @@ const priorityReason = (task, isSolved, isDueReview, isWeakLevel) => {
 const solvedTaskIdSet = computed(() => new Set(props.solvedTaskIds))
 const dueReviewTaskIdSet = computed(() => new Set(props.dueReviewTaskIds))
 const weakLevelSet = computed(() => new Set(props.weakLevels))
+const currentPage = ref(1)
 
 const listItems = computed(() =>
   props.displayTasks.map((task) => {
@@ -46,6 +49,36 @@ const listItems = computed(() =>
     }
   })
 )
+
+const totalPages = computed(() => Math.max(1, Math.ceil(listItems.value.length / PAGE_SIZE)))
+
+const pageStartIndex = computed(() => (currentPage.value - 1) * PAGE_SIZE)
+
+const pagedItems = computed(() =>
+  listItems.value.slice(pageStartIndex.value, pageStartIndex.value + PAGE_SIZE)
+)
+
+const pageRangeLabel = computed(() => {
+  if (!listItems.value.length) return '0-0'
+  const start = pageStartIndex.value + 1
+  const end = Math.min(pageStartIndex.value + PAGE_SIZE, listItems.value.length)
+  return `${start}-${end}`
+})
+
+const movePage = (nextPage) => {
+  currentPage.value = Math.min(totalPages.value, Math.max(1, nextPage))
+}
+
+watch(
+  () => props.displayTasks,
+  () => {
+    currentPage.value = 1
+  }
+)
+
+watch(totalPages, (value) => {
+  if (currentPage.value > value) currentPage.value = value
+})
 </script>
 
 <template>
@@ -55,8 +88,13 @@ const listItems = computed(() =>
       <p>表示中 {{ displayTasks.length }} 問 / 完了 {{ solvedCount }} 問（表示条件内 {{ progressPercent }}%）</p>
     </header>
 
+    <div v-if="displayTasks.length" class="paging-status">
+      <span>{{ pageRangeLabel }} / {{ displayTasks.length }} 問</span>
+      <span>ページ {{ currentPage }} / {{ totalPages }}</span>
+    </div>
+
     <div class="task-list" v-if="displayTasks.length">
-      <article v-for="item in listItems" :key="item.task.id" class="task-item">
+      <article v-for="item in pagedItems" :key="item.task.id" class="task-item">
         <div class="item-main">
           <TaskMetaRow
             :level="item.task.level"
@@ -116,6 +154,11 @@ const listItems = computed(() =>
         条件をリセットする
       </button>
     </div>
+
+    <nav v-if="displayTasks.length && totalPages > 1" class="pagination" aria-label="問題リストページ移動">
+      <button type="button" :disabled="currentPage === 1" @click="movePage(currentPage - 1)">前へ</button>
+      <button type="button" :disabled="currentPage === totalPages" @click="movePage(currentPage + 1)">次へ</button>
+    </nav>
   </section>
 </template>
 
@@ -160,6 +203,15 @@ const listItems = computed(() =>
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+}
+
+.paging-status {
+  margin-top: var(--space-2);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  color: var(--text-sub);
 }
 
 .task-item {
@@ -280,6 +332,28 @@ const listItems = computed(() =>
   cursor: pointer;
 }
 
+.pagination {
+  margin-top: var(--space-3);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.pagination button {
+  border: 0.0625rem solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 0.4375rem 0.75rem;
+  background: #ffffff;
+  color: var(--text-main);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 @media (max-width: 47.5rem) {
   .task-item {
     flex-direction: column;
@@ -291,6 +365,15 @@ const listItems = computed(() =>
   }
 
   .item-actions > * {
+    flex: 1;
+  }
+
+  .paging-status,
+  .pagination {
+    justify-content: space-between;
+  }
+
+  .pagination button {
     flex: 1;
   }
 }
@@ -322,6 +405,31 @@ const listItems = computed(() =>
 
   .item-actions {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 18.75rem) {
+  .content-head {
+    gap: 0.25rem;
+  }
+
+  .content-head h2 {
+    font-size: 1.0625rem;
+  }
+
+  .task-item {
+    gap: var(--space-2);
+    padding: 0.5rem;
+  }
+
+  .item-main h3 {
+    font-size: 1rem;
+  }
+
+  .item-main p,
+  .priority,
+  .spec-list {
+    font-size: 0.75rem !important;
   }
 }
 </style>

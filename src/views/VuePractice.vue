@@ -77,7 +77,6 @@ const weakLevels = computed(() =>
         :has-active-filters="hasActiveFilters"
         :active-filter-summary="activeFilterSummary"
         solve-route-name="vue-practice-solve"
-        :show-design="true"
         @toggle-solved="toggleSolved"
         @clear-filters="resetFilters"
       />
