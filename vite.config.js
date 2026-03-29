@@ -21,18 +21,5 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true
-  },
-  build: {
-    rolldownOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            const parts = id.split('node_modules/')[1]?.split('/') ?? []
-            const packageName = parts[0]?.startsWith('@') ? `${parts[0]}-${parts[1]}` : parts[0]
-            return packageName ? `vendor-${packageName}` : 'vendor'
-          }
-        }
-      }
-    }
   }
 })
