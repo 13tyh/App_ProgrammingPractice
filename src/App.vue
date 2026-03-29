@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const isNavOpen = ref(false)
+const isFirstRouteResolved = ref(false)
 
 watch(
   () => route.fullPath,
@@ -18,6 +19,10 @@ const toggleNav = () => {
 
 const closeNav = () => {
   isNavOpen.value = false
+}
+
+const markRouteResolved = () => {
+  isFirstRouteResolved.value = true
 }
 </script>
 
@@ -49,7 +54,36 @@ const closeNav = () => {
     </header>
 
     <main class="app-main">
-      <RouterView />
+      <RouterView v-slot="{ Component }">
+        <Suspense @resolve="markRouteResolved">
+          <component :is="Component" />
+          <template #fallback>
+            <section v-if="!isFirstRouteResolved" class="page-skeleton" aria-busy="true" aria-live="polite">
+              <div class="skeleton-line skeleton-title" />
+              <div class="skeleton-grid">
+                <div class="skeleton-card">
+                  <div class="skeleton-line skeleton-heading" />
+                  <div class="skeleton-line" />
+                  <div class="skeleton-line" />
+                  <div class="skeleton-line skeleton-short" />
+                </div>
+                <div class="skeleton-card">
+                  <div class="skeleton-line skeleton-heading" />
+                  <div class="skeleton-line" />
+                  <div class="skeleton-line" />
+                  <div class="skeleton-line skeleton-short" />
+                </div>
+                <div class="skeleton-card">
+                  <div class="skeleton-line skeleton-heading" />
+                  <div class="skeleton-line" />
+                  <div class="skeleton-line" />
+                  <div class="skeleton-line skeleton-short" />
+                </div>
+              </div>
+            </section>
+          </template>
+        </Suspense>
+      </RouterView>
     </main>
   </div>
 </template>
@@ -140,6 +174,63 @@ const closeNav = () => {
   padding: var(--space-3) 0.375rem 0.875rem;
 }
 
+.page-skeleton {
+  border: 0.0625rem solid #e3e3e8;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.skeleton-grid {
+  margin-top: var(--space-3);
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.skeleton-card {
+  border: 0.0625rem solid #e6e8ee;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  padding: var(--space-3);
+}
+
+.skeleton-line {
+  height: 0.75rem;
+  border-radius: 62.4375rem;
+  background: linear-gradient(90deg, #edf1f7 25%, #f6f8fc 37%, #edf1f7 63%);
+  background-size: 25rem 100%;
+  animation: skeletonShimmer 1.1s ease infinite;
+}
+
+.skeleton-line + .skeleton-line {
+  margin-top: var(--space-2);
+}
+
+.skeleton-title {
+  width: min(40%, 16rem);
+  height: 1.5rem;
+}
+
+.skeleton-heading {
+  width: 60%;
+  height: 1rem;
+}
+
+.skeleton-short {
+  width: 70%;
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: -25rem 0;
+  }
+  100% {
+    background-position: 25rem 0;
+  }
+}
+
 @media (max-width: 48rem) {
   .app-header {
     grid-template-columns: 1fr auto;
@@ -162,6 +253,10 @@ const closeNav = () => {
 
   .course-nav.open {
     display: grid;
+  }
+
+  .skeleton-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -188,6 +283,11 @@ const closeNav = () => {
 
   .app-main {
     padding: 0.5rem 0.125rem 0.75rem;
+  }
+
+  .page-skeleton {
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
   }
 }
 
@@ -225,6 +325,10 @@ const closeNav = () => {
 
   .app-main {
     padding: 0.375rem 0.0625rem 0.5rem;
+  }
+
+  .page-skeleton {
+    padding: var(--space-2);
   }
 }
 </style>
