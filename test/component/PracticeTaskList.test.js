@@ -61,4 +61,41 @@ describe('PracticeTaskList', () => {
 
     expect(wrapper.emitted('toggle-solved')?.[0]).toEqual([12])
   })
+
+  it('25件ある場合は24件ずつページング表示される', async () => {
+    const displayTasks = Array.from({ length: 25 }, (_, index) => ({
+      id: index + 1,
+      title: `問題 ${index + 1}`,
+      problem: `内容 ${index + 1}`,
+      level: '初級',
+      topic: '配列',
+      duration: '8分',
+      starDifficulty: 2
+    }))
+
+    const wrapper = mount(PracticeTaskList, {
+      props: {
+        displayTasks,
+        solvedTaskIds: [],
+        solvedCount: 0,
+        progressPercent: 0,
+        solveRouteName: 'js-practice-solve'
+      },
+      global: {
+        stubs: {
+          RouterLink: routerLinkStub
+        }
+      }
+    })
+
+    expect(wrapper.findAll('.task-item')).toHaveLength(24)
+    expect(wrapper.text()).toContain('1-24 / 25 問')
+    expect(wrapper.text()).toContain('ページ 1 / 2')
+
+    await wrapper.get('.pagination button:last-child').trigger('click')
+
+    expect(wrapper.findAll('.task-item')).toHaveLength(1)
+    expect(wrapper.text()).toContain('25-25 / 25 問')
+    expect(wrapper.text()).toContain('ページ 2 / 2')
+  })
 })
