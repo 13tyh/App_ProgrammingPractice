@@ -15,19 +15,19 @@
   --status-in-progress-text: #1d4f91;
   --status-done-bg: #e8f8ee;
   --status-done-text: #1f7a3f;
-  --radius-lg: 18px;
-  --radius-md: 12px;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 20px;
-  --layout-max-w: 1200px;
-  --layout-sidebar-w: 300px;
-  --layout-sidepane-w: 320px;
+  --radius-lg: 1.125rem;
+  --radius-md: 0.75rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --layout-max-w: 75rem;
+  --layout-sidebar-w: 18.75rem;
+  --layout-sidepane-w: 2rem;
   --layout-gap: var(--space-3);
-  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
-  --shadow-card: 0 6px 20px rgba(15, 23, 42, 0.06);
+  --shadow-soft: 0 0.625rem 1.875rem rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 0.375rem 1.25rem rgba(15, 23, 42, 0.06);
   --ease-apple: cubic-bezier(0.2, 0.8, 0.2, 1);
   --code-bg: #f2f2f4;
   --code-text: #1d1d1f;
@@ -77,16 +77,16 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(34px, 4.6vw, 48px);
+  font-size: clamp(2.125rem, 4.6vw, 3rem);
   letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: clamp(24px, 3.4vw, 32px);
+  font-size: clamp(1.5rem, 3.4vw, 2rem);
 }
 
 h3 {
-  font-size: clamp(18px, 2.8vw, 24px);
+  font-size: clamp(1.125rem, 2.8vw, 1.5rem);
 }
 
 p,
@@ -105,7 +105,7 @@ a {
 
 button:hover,
 a:hover {
-  transform: translateY(-1px);
+  transform: translateY(-0.0625rem);
 }
 
 button:active,
@@ -118,7 +118,7 @@ a:focus-visible,
 input:focus-visible,
 summary:focus-visible {
   outline: 0;
-  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.18);
+  box-shadow: 0 0 0 0.25rem rgba(0, 113, 227, 0.18);
 }
 
 code,
@@ -129,8 +129,8 @@ pre {
 code {
   color: var(--code-text);
   background: var(--code-bg);
-  border-radius: 6px;
-  padding: 2px 6px;
+  border-radius: 0.375rem;
+  padding: 0.125rem 0.375rem;
 }
 
 #app {
@@ -138,12 +138,12 @@ code {
   max-width: 100%;
   margin: 0 auto;
   min-height: 100svh;
-  padding: 8px 10px 18px;
+  padding: 0.5rem 0.625rem 1.125rem;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 26.875rem) {
   #app {
-    padding: 6px 6px 12px;
+    padding: 0.375rem 0.375rem 0.75rem;
   }
 }
 

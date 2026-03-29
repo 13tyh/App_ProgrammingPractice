@@ -29,7 +29,7 @@ defineProps({
 <style scoped>
 .design-block {
   margin-top: var(--space-3);
-  border: 1px solid #dfe3eb;
+  border: 0.0625rem solid #dfe3eb;
   border-radius: var(--radius-md);
   background: #f8f9fb;
   padding: var(--space-3);
@@ -37,7 +37,7 @@ defineProps({
 
 .design-title {
   margin: 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   color: #2d5fa3;
@@ -53,16 +53,16 @@ defineProps({
 .design-subtitle {
   margin: var(--space-3) 0 var(--space-1);
   color: #326db4;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
 .design-list {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 1.125rem;
   color: var(--text-sub);
   line-height: 1.45;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .design-list li + li {
@@ -76,6 +76,6 @@ defineProps({
 .design-review {
   margin: var(--space-3) 0 0;
   color: var(--text-sub);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 </style>

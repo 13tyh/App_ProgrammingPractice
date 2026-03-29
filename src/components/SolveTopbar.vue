@@ -25,10 +25,10 @@ const emit = defineEmits(['complete'])
 <style scoped>
 .card {
   border-radius: var(--radius-lg);
-  border: 1px solid #e3e3e8;
+  border: 0.0625rem solid #e3e3e8;
   background: var(--surface);
   box-shadow: var(--shadow-card);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(0.875rem);
 }
 
 .topbar {
@@ -47,14 +47,14 @@ const emit = defineEmits(['complete'])
 
 .title-wrap h1 {
   margin: var(--space-1) 0 0;
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 650;
   letter-spacing: -0.017em;
 }
 
 .eyebrow {
   margin: 0;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--text-sub);
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -62,17 +62,17 @@ const emit = defineEmits(['complete'])
 }
 
 .done-button {
-  border: 1px solid transparent;
-  border-radius: 10px;
-  padding: 9px var(--space-3);
+  border: 0.0625rem solid transparent;
+  border-radius: 0.625rem;
+  padding: 0.5625rem var(--space-3);
   background: var(--accent);
   color: #ffffff;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 6px 14px rgba(0, 113, 227, 0.24);
+  box-shadow: 0 0.375rem 0.875rem rgba(0, 113, 227, 0.24);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 47.5rem) {
   .topbar {
     grid-template-columns: 1fr;
     gap: var(--space-2);
@@ -80,32 +80,32 @@ const emit = defineEmits(['complete'])
   }
 
   .back-link {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   .title-wrap h1 {
-    font-size: clamp(20px, 5.4vw, 26px);
+    font-size: clamp(1.25rem, 5.4vw, 1.625rem);
   }
 
   .done-button {
     width: 100%;
-    min-height: 42px;
-    font-size: 14px;
+    min-height: 2.625rem;
+    font-size: 0.875rem;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 26.875rem) {
   .topbar {
-    padding: 8px;
+    padding: 0.5rem;
   }
 
   .title-wrap h1 {
     line-height: 1.22;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .eyebrow {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 }
 </style>

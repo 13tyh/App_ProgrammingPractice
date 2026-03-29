@@ -92,7 +92,7 @@ const weakLevels = computed(() =>
   background:
     radial-gradient(circle at 10% 0%, rgba(40, 95, 170, 0.12) 0%, rgba(40, 95, 170, 0) 42%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0));
-  border-radius: calc(var(--radius-lg) + 6px);
+  border-radius: calc(var(--radius-lg) + 0.375rem);
 }
 
 .workspace {
@@ -102,9 +102,21 @@ const weakLevels = computed(() =>
   gap: var(--layout-gap);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 62.5rem) {
   .workspace {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 47.5rem) {
+  .page {
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+  }
+
+  .workspace {
+    margin-top: var(--space-2);
+    gap: var(--space-2);
   }
 }
 </style>

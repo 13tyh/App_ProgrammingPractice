@@ -25,22 +25,22 @@ const resolvedText = () => {
 
 <style scoped>
 .mutation-warning {
-  border-radius: 10px;
-  border: 1px solid transparent;
+  border-radius: 0.625rem;
+  border: 0.0625rem solid transparent;
   line-height: 1.5;
   font-weight: 650;
 }
 
 .mutation-warning.is-detail {
   margin: var(--space-2) 0 0;
-  padding: 10px 12px;
-  font-size: 12px;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.75rem;
 }
 
 .mutation-warning.is-compact {
   margin-top: var(--space-2) !important;
-  padding: 6px 10px;
-  font-size: 12px !important;
+  padding: 0.375rem 0.625rem;
+  font-size: 0.75rem !important;
 }
 
 .mutation-warning.is-high {

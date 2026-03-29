@@ -18,7 +18,7 @@ const emit = defineEmits(['toggle'])
 <style scoped>
 .toggle-button {
   margin-top: var(--space-2);
-  border: 1px solid var(--line);
+  border: 0.0625rem solid var(--line);
   border-radius: var(--radius-md);
   padding: var(--space-2) var(--space-3);
   background: #f4f7fb;
@@ -31,22 +31,22 @@ const emit = defineEmits(['toggle'])
 }
 
 .toggle-track {
-  width: 30px;
-  height: 18px;
-  border-radius: 999px;
+  width: 1.875rem;
+  height: 1.125rem;
+  border-radius: 62.4375rem;
   background: rgba(148, 163, 184, 0.25);
-  border: 1px solid rgba(191, 219, 254, 0.35);
+  border: 0.0625rem solid rgba(191, 219, 254, 0.35);
   position: relative;
 }
 
 .toggle-thumb {
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 62.4375rem;
   background: #dbeafe;
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 0.125rem;
+  left: 0.125rem;
   transition: transform 0.18s ease;
 }
 
@@ -55,6 +55,6 @@ const emit = defineEmits(['toggle'])
 }
 
 .toggle-button[aria-pressed='true'] .toggle-thumb {
-  transform: translateX(12px);
+  transform: translateX(0.75rem);
 }
 </style>

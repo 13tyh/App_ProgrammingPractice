@@ -146,28 +146,28 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 <style scoped>
 .card {
   border-radius: var(--radius-lg);
-  border: 1px solid #e3e3e8;
+  border: 0.0625rem solid #e3e3e8;
   background: var(--surface);
   box-shadow: var(--shadow-card);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(0.875rem);
 }
 
 .sidebar {
   padding: var(--space-3);
   position: sticky;
-  top: 78px;
+  top: 4.875rem;
   height: fit-content;
 }
 
 .summary-label {
   margin: 0;
   color: var(--text-sub);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .summary-value {
   margin: var(--space-1) 0;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 800;
 }
 
@@ -178,8 +178,8 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 
 .meter {
   margin-top: var(--space-2);
-  height: 7px;
-  border-radius: 999px;
+  height: 0.4375rem;
+  border-radius: 62.4375rem;
   background: #e6e9f0;
   overflow: hidden;
 }
@@ -200,14 +200,14 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
   margin-top: var(--space-3);
   padding: var(--space-3);
   border-radius: var(--radius-md);
-  border: 1px solid #dbe5f3;
+  border: 0.0625rem solid #dbe5f3;
   background: #f6f9ff;
 }
 
 .insight-title {
   margin: 0;
   color: #28598f;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -216,7 +216,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 .streak {
   margin: var(--space-2) 0 0;
   color: var(--text-main);
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 800;
 }
 
@@ -228,12 +228,12 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 }
 
 .goal-ring {
-  width: 58px;
-  height: 58px;
-  border-radius: 999px;
+  width: 3.625rem;
+  height: 3.625rem;
+  border-radius: 62.4375rem;
   display: grid;
   place-items: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 800;
   color: var(--text-main);
   background: conic-gradient(#0071e3 var(--goal-percent), #dfe7f5 0);
@@ -243,8 +243,8 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 .goal-ring::after {
   content: '';
   position: absolute;
-  inset: 6px;
-  border-radius: 999px;
+  inset: 0.375rem;
+  border-radius: 62.4375rem;
   background: #ffffff;
 }
 
@@ -256,14 +256,14 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 .goal-title {
   margin: 0;
   color: var(--text-main);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
 }
 
 .goal-sub {
-  margin: 2px 0 0;
+  margin: 0.125rem 0 0;
   color: var(--text-sub);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .goal-ring-wrap.reached .goal-ring {
@@ -280,7 +280,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 .review-note {
   margin: var(--space-1) 0 0;
   color: #91451d;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
@@ -288,28 +288,28 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
   margin-top: var(--space-2);
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .daily-item {
   display: grid;
   justify-items: center;
-  gap: 2px;
-  border: 1px solid #d4e0f5;
-  border-radius: 10px;
-  padding: 6px 2px;
+  gap: 0.125rem;
+  border: 0.0625rem solid #d4e0f5;
+  border-radius: 0.625rem;
+  padding: 0.375rem 0.125rem;
   background: #ffffff;
 }
 
 .daily-count {
   color: var(--text-main);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
 }
 
 .daily-label {
   color: var(--text-sub);
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .level-progress {
@@ -317,13 +317,13 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 6px;
+  gap: 0.375rem;
 }
 
 .level-progress li {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--text-sub);
 }
 
@@ -336,16 +336,16 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
   margin: 0 0 var(--space-2);
   display: block;
   color: var(--text-main);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
 }
 
 .input-wrap input {
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid var(--line);
+  border: 0.0625rem solid var(--line);
   border-radius: var(--radius-md);
-  padding: 9px 10px;
+  padding: 0.5625rem 0.625rem;
   background: #ffffff;
   color: var(--text-main);
 }
@@ -353,7 +353,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 .input-wrap input:focus-visible {
   outline: 0;
   border-color: #9ec8f7;
-  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.12);
+  box-shadow: 0 0 0 0.25rem rgba(0, 113, 227, 0.12);
 }
 
 .check-wrap {
@@ -371,9 +371,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 }
 
 .level-button {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 6px 10px;
+  border: 0.0625rem solid var(--line);
+  border-radius: 62.4375rem;
+  padding: 0.375rem 0.625rem;
   background: #ffffff;
   color: var(--text-main);
   cursor: pointer;
@@ -382,7 +382,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 
 .level-button:hover {
   border-color: #b8c8df;
-  transform: translateY(-1px);
+  transform: translateY(-0.0625rem);
 }
 
 .level-button.active {
@@ -394,9 +394,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
 .clear-button {
   margin-top: var(--space-3);
   width: 100%;
-  border: 1px solid var(--line);
+  border: 0.0625rem solid var(--line);
   border-radius: var(--radius-md);
-  padding: 7px 9px;
+  padding: 0.4375rem 0.5625rem;
   background: transparent;
   color: var(--text-main);
   font-weight: 600;
@@ -407,28 +407,28 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
   background: #ffffff;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 62.5rem) {
   .sidebar {
     position: static;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 26.875rem) {
   .sidebar {
     padding: var(--space-2);
   }
 
   .summary-value {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .goal-ring {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
   }
 
   .goal-ring::after {
-    inset: 5px;
+    inset: 0.3125rem;
   }
 
   .daily-strip {
@@ -436,12 +436,12 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
   }
 
   .daily-item {
-    padding: 5px 2px;
+    padding: 0.3125rem 0.125rem;
   }
 
   .level-button,
   .clear-button {
-    min-height: 38px;
+    min-height: 2.375rem;
   }
 }
 

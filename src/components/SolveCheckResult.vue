@@ -19,20 +19,20 @@ defineProps({
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: 6px var(--space-3);
-  border-radius: 9px;
-  border: 1px solid #d8dbe2;
+  padding: 0.375rem var(--space-3);
+  border-radius: 0.5625rem;
+  border: 0.0625rem solid #d8dbe2;
   background: #f7f8fa;
 }
 
 .check-icon {
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 62.4375rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 800;
   background: rgba(186, 193, 206, 0.32);
   color: #2d3541;

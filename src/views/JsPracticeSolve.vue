@@ -452,7 +452,7 @@ const completeAndBack = () => {
           v-if="editorReady"
           v-model="code"
           :extensions="editorExtensions"
-          :style="{ height: '520px' }"
+          :style="{ height: '32.5rem' }"
         />
         <div v-else class="editor-loading">エディタを読み込み中...</div>
 
@@ -490,15 +490,15 @@ const completeAndBack = () => {
   background:
     radial-gradient(circle at 80% -20%, rgba(7, 80, 171, 0.14) 0%, rgba(7, 80, 171, 0) 42%),
     linear-gradient(180deg, rgba(240, 245, 252, 0.82), rgba(240, 245, 252, 0.26));
-  border-radius: calc(var(--radius-lg) + 6px);
+  border-radius: calc(var(--radius-lg) + 0.375rem);
 }
 
 .card {
-  border-radius: 14px;
-  border: 1px solid var(--line);
+  border-radius: 0.875rem;
+  border: 0.0625rem solid var(--line);
   background: var(--surface);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-  backdrop-filter: blur(14px);
+  box-shadow: 0 0.625rem 1.5rem rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(0.875rem);
 }
 
 .back-link {
@@ -521,7 +521,7 @@ const completeAndBack = () => {
 
 .panel-title {
   margin: 0 0 var(--space-3);
-  font-size: 13px;
+  font-size: 0.8125rem;
   letter-spacing: 0.06em;
   color: var(--text-sub);
   text-transform: uppercase;
@@ -536,9 +536,9 @@ const completeAndBack = () => {
 }
 
 .focus-toggle {
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
+  font-size: 0.75rem;
+  padding: 0.375rem 0.625rem;
+  border-radius: 62.4375rem;
 }
 
 .focus-toggle.on {
@@ -554,8 +554,8 @@ const completeAndBack = () => {
 
 .context-box {
   margin-top: var(--space-3);
-  border-radius: 10px;
-  border: 1px solid #dfe3eb;
+  border-radius: 0.625rem;
+  border: 0.0625rem solid #dfe3eb;
   background: #f8f9fb;
   padding: var(--space-3);
 }
@@ -569,7 +569,7 @@ const completeAndBack = () => {
 .context-note {
   margin: var(--space-2) 0 0;
   color: var(--text-sub);
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .context-group {
@@ -584,62 +584,62 @@ const completeAndBack = () => {
 
 .context-group ul {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 1.125rem;
 }
 
 .context-group li {
-  margin-bottom: 3px;
+  margin-bottom: 0.1875rem;
   color: var(--text-sub);
 }
 
 .retry-note {
   margin: var(--space-2) 0 0;
   color: #91571c;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
 .hint {
   margin-top: var(--space-2);
-  border: 1px solid #e8d6a8;
+  border: 0.0625rem solid #e8d6a8;
   background: #fff8e7;
   color: #7a5c1e;
   border-radius: var(--radius-md);
   padding: var(--space-3);
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .answer,
 .log-box {
   margin-top: var(--space-2);
   border-radius: var(--radius-md);
-  border: 1px solid #dfe3eb;
+  border: 0.0625rem solid #dfe3eb;
   background: #f7f8fa;
   color: #1f232b;
   padding: var(--space-3);
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.5;
   overflow-x: auto;
 }
 
 :deep(.cm-editor) {
-  border: 1px solid #d2d8e2;
-  border-radius: 10px;
+  border: 0.0625rem solid #d2d8e2;
+  border-radius: 0.625rem;
   overflow: hidden;
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 0.5rem 1.125rem rgba(15, 23, 42, 0.08);
 }
 
 :deep(.cm-gutters) {
   background: #f3f5f8;
-  border-right: 1px solid #d2d8e2;
+  border-right: 0.0625rem solid #d2d8e2;
 }
 
 .editor-loading {
-  height: 520px;
+  height: 32.5rem;
   display: grid;
   place-items: center;
-  border: 1px solid #d2d8e2;
-  border-radius: 10px;
+  border: 0.0625rem solid #d2d8e2;
+  border-radius: 0.625rem;
   color: var(--text-sub);
   background: #f8fafc;
 }
@@ -657,13 +657,13 @@ const completeAndBack = () => {
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 75rem) {
   .workspace {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 47.5rem) {
   .page {
     padding: var(--space-3);
     border-radius: var(--radius-md);
@@ -685,44 +685,44 @@ const completeAndBack = () => {
 
   .focus-toggle {
     width: 100%;
-    min-height: 40px;
+    min-height: 2.5rem;
   }
 
   .answer,
   .log-box,
   .hint {
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.45;
   }
 
   .context-group ul,
   .inline-list {
-    padding-left: 16px;
+    padding-left: 1rem;
   }
 
   :deep(.cm-editor) {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   .editor-loading {
-    height: 380px;
+    height: 23.75rem;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 26.875rem) {
   .page {
     padding: var(--space-2);
   }
 
   .panel-title {
-    font-size: 12px;
+    font-size: 0.75rem;
     margin-bottom: var(--space-2);
   }
 
   .problem,
   .context-note,
   .context-group li {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .answer,
@@ -731,7 +731,7 @@ const completeAndBack = () => {
   }
 
   :deep(.cm-editor) {
-    min-height: 360px;
+    min-height: 22.5rem;
   }
 }
 </style>

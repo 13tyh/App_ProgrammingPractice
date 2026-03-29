@@ -33,8 +33,8 @@ const props = defineProps({
 <style scoped>
 .inline-problem {
   margin-bottom: var(--space-3);
-  border: 1px solid #d8e2f0;
-  border-radius: 10px;
+  border: 0.0625rem solid #d8e2f0;
+  border-radius: 0.625rem;
   padding: var(--space-2) var(--space-3);
   background: #f7faff;
 }
@@ -42,36 +42,36 @@ const props = defineProps({
 .inline-problem summary {
   cursor: pointer;
   color: #215b9b;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
 .inline-problem-title {
   margin: var(--space-2) 0 0;
   color: var(--text-main);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
 .inline-problem-body {
   margin: var(--space-1) 0 0;
   color: var(--text-sub);
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
 .inline-signature {
   margin: var(--space-2) 0 0;
   color: #204d86;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
 .inline-list {
   margin: var(--space-2) 0 0;
-  padding-left: 18px;
+  padding-left: 1.125rem;
   color: var(--text-sub);
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.45;
 }
 </style>

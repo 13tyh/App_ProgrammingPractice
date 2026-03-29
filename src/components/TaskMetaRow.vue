@@ -44,9 +44,9 @@ const formatStars = (value) => {
 }
 
 .status-chip {
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-size: 12px;
+  padding: 0.1875rem 0.5rem;
+  border-radius: 62.4375rem;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
@@ -61,9 +61,9 @@ const formatStars = (value) => {
 }
 
 .chip {
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-size: 12px;
+  padding: 0.1875rem 0.5rem;
+  border-radius: 62.4375rem;
+  font-size: 0.75rem;
   font-weight: 700;
   background: #f4f5f8;
   color: #4e5a6a;

@@ -33,7 +33,7 @@ const emit = defineEmits(['run', 'check', 'reset'])
 }
 
 button {
-  border: 1px solid var(--line);
+  border: 0.0625rem solid var(--line);
   border-radius: var(--radius-md);
   padding: var(--space-2) var(--space-3);
   background: #ffffff;
@@ -60,7 +60,7 @@ button.ghost {
 
 .busy-note {
   margin-top: var(--space-2);
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #2d5fa3;
   font-weight: 700;
 }

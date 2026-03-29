@@ -122,10 +122,10 @@ const listItems = computed(() =>
 <style scoped>
 .card {
   border-radius: var(--radius-lg);
-  border: 1px solid #e3e3e8;
+  border: 0.0625rem solid #e3e3e8;
   background: var(--surface);
   box-shadow: var(--shadow-card);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(0.875rem);
 }
 
 .content {
@@ -139,12 +139,12 @@ const listItems = computed(() =>
   gap: var(--space-2);
   align-items: baseline;
   padding-bottom: var(--space-3);
-  border-bottom: 1px solid #e3e5eb;
+  border-bottom: 0.0625rem solid #e3e5eb;
 }
 
 .content-head h2 {
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 740;
   letter-spacing: -0.015em;
 }
@@ -152,7 +152,7 @@ const listItems = computed(() =>
 .content-head p {
   margin: 0;
   color: var(--text-sub);
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .task-list {
@@ -163,7 +163,7 @@ const listItems = computed(() =>
 }
 
 .task-item {
-  border: 1px solid #e2e4ea;
+  border: 0.0625rem solid #e2e4ea;
   background: #ffffff;
   border-radius: var(--radius-md);
   padding: var(--space-3);
@@ -173,13 +173,13 @@ const listItems = computed(() =>
 }
 
 .task-item:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transform: translateY(-0.0625rem);
+  box-shadow: 0 0.5rem 1.25rem rgba(15, 23, 42, 0.08);
 }
 
 .item-main h3 {
   margin: var(--space-2) 0 var(--space-1);
-  font-size: 23px;
+  font-size: 1.4375rem;
   font-weight: 730;
   letter-spacing: -0.012em;
 }
@@ -188,20 +188,20 @@ const listItems = computed(() =>
   margin: 0;
   color: var(--text-sub);
   line-height: 1.5;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .priority {
   margin-top: var(--space-2) !important;
   color: #255b9b !important;
   font-weight: 700;
-  font-size: 13px !important;
+  font-size: 0.8125rem !important;
 }
 
 .spec-toggle {
   margin-top: var(--space-2);
-  border: 1px solid #dfe3eb;
-  border-radius: 10px;
+  border: 0.0625rem solid #dfe3eb;
+  border-radius: 0.625rem;
   background: #f8f9fb;
   padding: var(--space-2) var(--space-3);
 }
@@ -209,22 +209,22 @@ const listItems = computed(() =>
 .spec-toggle summary {
   cursor: pointer;
   color: var(--accent);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
 .spec-subtitle {
   margin: var(--space-2) 0 var(--space-1) !important;
   color: #326db4 !important;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
 .spec-list {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 1.125rem;
   color: var(--text-sub);
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.45;
 }
 
@@ -242,16 +242,16 @@ const listItems = computed(() =>
 .solve-link {
   text-align: center;
   border-radius: var(--radius-md);
-  padding: 7px var(--space-2);
+  padding: 0.4375rem var(--space-2);
   font-weight: 600;
 }
 
 .solve-link {
   text-decoration: none;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   color: #ffffff;
   background: var(--accent);
-  box-shadow: 0 6px 14px rgba(0, 113, 227, 0.24);
+  box-shadow: 0 0.375rem 0.875rem rgba(0, 113, 227, 0.24);
 }
 
 .empty {
@@ -266,12 +266,12 @@ const listItems = computed(() =>
 .empty-sub {
   margin: var(--space-2) 0 0;
   color: var(--text-sub);
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .empty-clear {
   margin-top: var(--space-2);
-  border: 1px solid #cdd6e2;
+  border: 0.0625rem solid #cdd6e2;
   border-radius: var(--radius-md);
   background: #ffffff;
   color: var(--text-main);
@@ -280,7 +280,7 @@ const listItems = computed(() =>
   cursor: pointer;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 47.5rem) {
   .task-item {
     flex-direction: column;
   }
@@ -295,17 +295,17 @@ const listItems = computed(() =>
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 26.875rem) {
   .content {
     padding: var(--space-2);
   }
 
   .content-head h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .content-head p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .task-item {
@@ -313,11 +313,11 @@ const listItems = computed(() =>
   }
 
   .item-main h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .item-main p {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   .item-actions {
