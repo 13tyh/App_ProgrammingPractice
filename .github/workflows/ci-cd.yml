@@ -43,12 +43,13 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      # Bunでoptional依存が欠けるケースの対策（Linux向けrolldownバインディングを明示導入）
-      - name: Ensure rolldown Linux binding
+      # Bunでoptional依存が欠けるケースの対策（Linux向けネイティブバインディングを明示導入）
+      - name: Ensure Linux native bindings
         if: runner.os == 'Linux'
         run: |
           VERSION=$(node -p "require('./node_modules/rolldown/package.json').optionalDependencies['@rolldown/binding-linux-x64-gnu']")
           npm install --no-save "@rolldown/binding-linux-x64-gnu@${VERSION}"
+          npm install --no-save lightningcss-linux-x64-gnu
 
       # 本番ビルドが通るか確認
       - name: Build application
@@ -82,12 +83,13 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      # Bunでoptional依存が欠けるケースの対策（Linux向けrolldownバインディングを明示導入）
-      - name: Ensure rolldown Linux binding
+      # Bunでoptional依存が欠けるケースの対策（Linux向けネイティブバインディングを明示導入）
+      - name: Ensure Linux native bindings
         if: runner.os == 'Linux'
         run: |
           VERSION=$(node -p "require('./node_modules/rolldown/package.json').optionalDependencies['@rolldown/binding-linux-x64-gnu']")
           npm install --no-save "@rolldown/binding-linux-x64-gnu@${VERSION}"
+          npm install --no-save lightningcss-linux-x64-gnu
 
       # リポジトリ配下公開のため base path を指定してビルド
       - name: Build for GitHub Pages
