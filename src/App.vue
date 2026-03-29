@@ -1,10 +1,11 @@
 <script setup>
-import { ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { onMounted, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
+const router = useRouter()
 const isNavOpen = ref(false)
-const isFirstRouteResolved = ref(false)
+const isInitialLoading = ref(true)
 
 watch(
   () => route.fullPath,
@@ -21,9 +22,18 @@ const closeNav = () => {
   isNavOpen.value = false
 }
 
-const markRouteResolved = () => {
-  isFirstRouteResolved.value = true
-}
+onMounted(async () => {
+  const startedAt = performance.now()
+  await router.isReady()
+
+  const MIN_SKELETON_MS = 260
+  const elapsed = performance.now() - startedAt
+  const waitMs = Math.max(0, MIN_SKELETON_MS - elapsed)
+
+  setTimeout(() => {
+    isInitialLoading.value = false
+  }, waitMs)
+})
 </script>
 
 <template>
@@ -54,36 +64,30 @@ const markRouteResolved = () => {
     </header>
 
     <main class="app-main">
-      <RouterView v-slot="{ Component }">
-        <Suspense @resolve="markRouteResolved">
-          <component :is="Component" />
-          <template #fallback>
-            <section v-if="!isFirstRouteResolved" class="page-skeleton" aria-busy="true" aria-live="polite">
-              <div class="skeleton-line skeleton-title" />
-              <div class="skeleton-grid">
-                <div class="skeleton-card">
-                  <div class="skeleton-line skeleton-heading" />
-                  <div class="skeleton-line" />
-                  <div class="skeleton-line" />
-                  <div class="skeleton-line skeleton-short" />
-                </div>
-                <div class="skeleton-card">
-                  <div class="skeleton-line skeleton-heading" />
-                  <div class="skeleton-line" />
-                  <div class="skeleton-line" />
-                  <div class="skeleton-line skeleton-short" />
-                </div>
-                <div class="skeleton-card">
-                  <div class="skeleton-line skeleton-heading" />
-                  <div class="skeleton-line" />
-                  <div class="skeleton-line" />
-                  <div class="skeleton-line skeleton-short" />
-                </div>
-              </div>
-            </section>
-          </template>
-        </Suspense>
-      </RouterView>
+      <section v-if="isInitialLoading" class="page-skeleton" aria-busy="true" aria-live="polite">
+        <div class="skeleton-line skeleton-title" />
+        <div class="skeleton-grid">
+          <div class="skeleton-card">
+            <div class="skeleton-line skeleton-heading" />
+            <div class="skeleton-line" />
+            <div class="skeleton-line" />
+            <div class="skeleton-line skeleton-short" />
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-line skeleton-heading" />
+            <div class="skeleton-line" />
+            <div class="skeleton-line" />
+            <div class="skeleton-line skeleton-short" />
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-line skeleton-heading" />
+            <div class="skeleton-line" />
+            <div class="skeleton-line" />
+            <div class="skeleton-line skeleton-short" />
+          </div>
+        </div>
+      </section>
+      <RouterView v-else />
     </main>
   </div>
 </template>
