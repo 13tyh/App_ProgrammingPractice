@@ -32,10 +32,35 @@ const editorExtensions = shallowRef([])
 const editorReady = ref(false)
 const isChecking = ref(false)
 const EXECUTION_TIMEOUT_MS = 1500
+const MAX_EXEC_SOURCE_LENGTH = 20000
+const BLOCKED_EXEC_PATTERNS = [
+  {
+    pattern: /\b(importScripts|XMLHttpRequest|WebSocket|EventSource|BroadcastChannel)\b/,
+    message: 'セキュリティ上の理由でネットワーク関連APIの一部は実行できません。'
+  },
+  {
+    pattern: /\bnavigator\.sendBeacon\s*\(/,
+    message: 'sendBeacon は実行できません。'
+  },
+  {
+    pattern: /\b(postMessage)\s*\(/,
+    message: 'postMessage の直接利用は制限されています。'
+  }
+]
 let scriptWorker = null
 let scriptWorkerUrl = ''
 let scriptRequestId = 0
 const pendingScriptRequests = new Map()
+
+const validateExecutableSource = (source) => {
+  if (source.length > MAX_EXEC_SOURCE_LENGTH) {
+    return `コード量が上限（${MAX_EXEC_SOURCE_LENGTH}文字）を超えています。`
+  }
+
+  const blocked = BLOCKED_EXEC_PATTERNS.find((item) => item.pattern.test(source))
+  if (blocked) return blocked.message
+  return null
+}
 
 onMounted(async () => {
   const [{ javascript }, { oneDark }] = await Promise.all([
@@ -103,7 +128,20 @@ self.onmessage = (event) => {
       useRoute: () => ({ params: {}, query: {} })
     }
 
-    const runner = new Function('console', 'sandbox', 'with (sandbox) {\n' + source + '\n}')
+    const guardedSource = [
+      '"use strict";',
+      'const importScripts = undefined;',
+      'const XMLHttpRequest = undefined;',
+      'const WebSocket = undefined;',
+      'const EventSource = undefined;',
+      'const BroadcastChannel = undefined;',
+      'const postMessage = undefined;',
+      'with (sandbox) {',
+      source,
+      '}'
+    ].join('\n')
+
+    const runner = new Function('console', 'sandbox', guardedSource)
     runner(fakeConsole, sandbox)
     self.postMessage({ id, type: 'result', logs: localLogs })
   } catch (error) {
@@ -144,6 +182,12 @@ self.onmessage = (event) => {
 
 const executeScript = (source, timeoutMs = EXECUTION_TIMEOUT_MS) =>
   new Promise((resolve) => {
+    const validationError = validateExecutableSource(source)
+    if (validationError) {
+      resolve({ logs: [], error: new Error(validationError), timedOut: false })
+      return
+    }
+
     const worker = ensureScriptWorker()
     const requestId = ++scriptRequestId
 
