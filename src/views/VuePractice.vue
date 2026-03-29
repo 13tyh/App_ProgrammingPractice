@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { vueTasks } from '../constants/vueTasks'
+import { vueTasksList } from '../constants/vueTasksList'
 import { difficultyOptions, usePracticeList } from '../composables/usePracticeList'
 import { useSolvedTasks } from '../composables/useSolvedTasks'
 import { useLearningMetrics } from '../composables/useLearningMetrics'
@@ -24,10 +24,10 @@ const {
   hasActiveFilters,
   activeFilterSummary,
   resetFilters
-} = usePracticeList(vueTasks, solvedTaskIds, reviewQueue)
+} = usePracticeList(vueTasksList, solvedTaskIds, reviewQueue)
 
 const { solvedByLevel, recentDailySolved, currentStreak, dueReviewCount, todaySolvedCount } = useLearningMetrics(
-  vueTasks,
+  vueTasksList,
   solvedTaskIds,
   learningHistory,
   reviewQueue
@@ -47,7 +47,7 @@ const weakLevels = computed(() =>
       <PracticeFiltersSidebar
         :total-progress-percent="totalProgressPercent"
         :total-solved-count="totalSolvedCount"
-        :total-task-count="vueTasks.length"
+        :total-task-count="vueTasksList.length"
         :difficulty-options="difficultyOptions"
         :selected-difficulty="selectedDifficulty"
         :keyword="keyword"
@@ -117,6 +117,12 @@ const weakLevels = computed(() =>
   .workspace {
     margin-top: var(--space-2);
     gap: var(--space-2);
+  }
+}
+
+@media (max-width: 18.75rem) {
+  .page {
+    padding: var(--space-2);
   }
 }
 </style>

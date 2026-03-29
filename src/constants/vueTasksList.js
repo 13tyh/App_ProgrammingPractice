@@ -1,0 +1,4401 @@
+export const vueTasksList = [
+  {
+    "id": 1,
+    "title": "refでカウント表示",
+    "problem": "refでcountを作り、ボタンで +1 できるようにしてください。",
+    "level": "初級",
+    "topic": "ref",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "countの初期値は0とする",
+        "1クリックごとに+1のみ行う"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "初期表示: 0, 1回クリック後: 1"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "減算ボタンやリセット機能は不要"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "computedで税込み金額",
+    "problem": "priceから税込み金額(taxIncluded)をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "消費税率は 10%（taxRate = 0.1）で固定する",
+        "税込み金額は小数点以下を切り捨てる（Math.floor）",
+        "初期価格は price = 1000 を利用する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "price = 1000 のとき taxIncluded = 1100",
+        "price = 1980 のとき taxIncluded = 2178"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "軽減税率など複数税率の考慮は不要",
+        "通貨フォーマット（3桁区切り）対応は不要"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "v-modelで入力反映",
+    "problem": "inputとnameをv-modelでバインドし、下にそのまま表示してください。",
+    "level": "初級",
+    "topic": "v-model",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "nameの初期値は空文字とする",
+        "v-modelで双方向バインドする"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "inputに \"Vue\" と入力したら下段表示も \"Vue\""
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "バリデーションやtrim処理は不要"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "title": "v-forでリスト表示",
+    "problem": "todos配列をv-forで描画し、keyを指定してください。",
+    "level": "初級",
+    "topic": "v-for",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "starterのtodos配列をそのまま利用する",
+        "keyはtodo.idを使う"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "2件のliが順番どおり表示される"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "削除・追加処理の実装は不要"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "title": "v-if/v-elseで状態表示",
+    "problem": "isLoadingがtrueならLoading、falseならDoneを表示してください。",
+    "level": "初級",
+    "topic": "v-if",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "isLoading=trueでLoading, falseでDoneを表示する",
+        "同時表示はしない"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "isLoading=falseならDoneのみ表示"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "ローディングの実時間制御は不要"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "title": "watchで入力監視",
+    "problem": "keywordをwatchして、変更時にconsole.logしてください。",
+    "level": "中級",
+    "topic": "watch",
+    "duration": "12分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "watch対象はkeywordのみ",
+        "ログ出力はnewValueを使う"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "keywordがabcに変わった時 consoleにabcを出力"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "API連携やdebounceは不要"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "title": "watchEffectで自動追跡",
+    "problem": "countが変わるたびにwatchEffect内でログ出力してください。",
+    "level": "中級",
+    "topic": "watchEffect",
+    "duration": "12分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "watchEffectは初回実行される前提",
+        "count.value参照で依存登録する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "count変更のたびに最新値が出力される"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "停止処理(onInvalidate)は不要"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "title": "props受け取り",
+    "problem": "name(string)とage(number)をpropsで受け取って表示してください。",
+    "level": "中級",
+    "topic": "defineProps",
+    "duration": "12分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "nameはString, ageはNumberで受け取る",
+        "templateでprops経由表示する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "name=Taro, age=20で \"Taro (20)\" 表示"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "propsの厳密バリデーションは不要"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "title": "emitで親へ通知",
+    "problem": "ボタン押下で emit(\"submit\", { ok: true }) を発火してください。",
+    "level": "中級",
+    "topic": "defineEmits",
+    "duration": "14分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "イベント名はsubmit固定",
+        "payloadは{ ok: true }固定"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "送信ボタン押下でsubmitイベント1回発火"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "API送信や多重クリック防止は不要"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "title": "onMountedで初期取得",
+    "problem": "onMountedで/api/profileを取得し、profileへ代入してください。",
+    "level": "中級",
+    "topic": "onMounted + fetch",
+    "duration": "16分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "onMountedで1回のみ取得する",
+        "レスポンスはjsonとしてprofileへ代入する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "onMounted後にprofile.valueがオブジェクトになる"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "エラーUIとリトライ処理は不要"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "title": "computed + filter検索",
+    "problem": "keywordに応じてusersを絞り込む filteredUsers をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "computed + filter",
+    "duration": "14分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "検索は大文字小文字を区別しない",
+        "部分一致(includes)で判定する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "keyword=taでTaroが残る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "日本語かな漢字変換の曖昧検索は不要"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "title": "フォーム送信処理",
+    "problem": "name/emailをv-modelで受け取り、submit時にJSON POSTしてください。",
+    "level": "上級",
+    "topic": "v-model + fetch",
+    "duration": "18分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "submitは@submit.preventで発火する",
+        "POST bodyはname/emailの2項目のみ"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "送信時にapplication/jsonでPOSTされる"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "入力バリデーションとトースト表示は不要"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "title": "provide/inject連携",
+    "problem": "親でprovide(\"theme\", \"dark\")し、子でinjectして表示するコードを書いてください。",
+    "level": "上級",
+    "topic": "provide + inject",
+    "duration": "16分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "provideキーはtheme固定",
+        "injectのデフォルトはlight"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "provideありならdark, なしならlight"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "階層コンポーネント分割の実装は不要"
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "title": "router遷移処理",
+    "problem": "ボタン押下で /js-practice へ遷移する goPractice を作ってください。",
+    "level": "上級",
+    "topic": "useRouter",
+    "duration": "14分",
+    "starDifficulty": 1,
+    "mutationWarningShort": "破壊的操作あり",
+    "mutationWarningLevel": "high",
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "遷移先は/js-practice固定",
+        "useRouter().pushを使う"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "Go押下で/js-practiceへ遷移"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "遷移前確認ダイアログは不要"
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "title": "ローディング/エラー管理",
+    "problem": "API取得処理で loading/error/data の3状態を管理してください。",
+    "level": "実務",
+    "topic": "try/catch/finally + ref",
+    "duration": "20分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "load開始時にloading=true/error初期化する",
+        "finallyで必ずloading=falseに戻す"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "成功時:data更新, 失敗時:error更新, 最終的にloading=false"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "再試行ボタンや指数バックオフは不要"
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "title": "一覧のソート/フィルタ/検索",
+    "problem": "productsをkeywordで絞り込み、price昇順で並べた visibleProducts をcomputedで作ってください。",
+    "level": "実務",
+    "topic": "computed + toSorted + filter",
+    "duration": "22分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "keywordは小文字比較で検索",
+        "並び順はprice昇順固定"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "A:300, B:100 なら visibleProductsはB,A順"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "降順切替や複合ソートは不要"
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "title": "基礎: state駆動カウンタ",
+    "problem": "countをrefで作成し、ボタン押下でcount++する最小実装を書いてください。",
+    "level": "初級",
+    "topic": "state + ref",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "クリック式はcount++でよい",
+        "表示文言はCount: {{ count }}を維持する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "初期0, 2回クリックで2"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "別メソッド化やcomputed化は不要"
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "title": "基礎: reactiveフォーム初期化",
+    "problem": "email/password/rememberを持つformをreactiveで定義してください。",
+    "level": "初級",
+    "topic": "reactive",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "formはreactiveで1オブジェクトにまとめる",
+        "rememberの初期値はfalse"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "email/passwordは空文字で開始"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "送信処理の実装は不要"
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "title": "基礎: reactiveを安全更新",
+    "problem": "reactiveのform参照を保ったままemailだけ更新するコードを書いてください。",
+    "level": "中級",
+    "topic": "Object.assign",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": "破壊的操作あり",
+    "mutationWarningLevel": "high",
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "参照維持のため再代入せずObject.assignを使う",
+        "更新対象はemailのみ"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "password値は保持されたままemailだけ変更"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "部分更新ヘルパー関数化は不要"
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "title": "基礎: computedでフルネーム",
+    "problem": "first/lastからfullNameをcomputedで作成してください。",
+    "level": "初級",
+    "topic": "computed",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "fullNameは\"姓 名\"の順で結合する",
+        "スペース1つで連結する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "Yamada + Taro => \"Yamada Taro\""
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "ミドルネーム対応は不要"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "title": "基礎: watchで副作用分離",
+    "problem": "keyword変更時に非同期処理を呼ぶwatchを実装してください。",
+    "level": "中級",
+    "topic": "watch",
+    "duration": "12分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "watchコールバックはasyncで記述する",
+        "keyword変更ごとに検索APIを呼ぶ"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "keyword更新時に/api/search?q=...を呼び出し"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "キャンセル制御とdebounceは不要"
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "title": "基礎: 子からlikeイベント通知",
+    "problem": "LikeButtonコンポーネントでlikeイベントをemitしてください。",
+    "level": "中級",
+    "topic": "defineEmits",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "イベント名はlike固定",
+        "クリック時にemit(\"like\")を直接呼ぶ"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "Likeボタン押下でlikeイベント1回発火"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "二重いいね防止は不要"
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "title": "基礎: TextFieldのv-model対応",
+    "problem": "TextFieldでmodelValueとupdate:modelValueを使った入力コンポーネントを作ってください。",
+    "level": "中級",
+    "topic": "v-model component",
+    "duration": "14分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "propsはmodelValue/labelを受ける",
+        "入力時にupdate:modelValueをemitする"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "入力 \"abc\" でemit(\"update:modelValue\", \"abc\")"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "IME最適化や遅延更新は不要"
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "title": "基礎: Cardのslot受け取り",
+    "problem": "title props と default slot を持つCardコンポーネントを作ってください。",
+    "level": "中級",
+    "topic": "slot",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "titleは必須props",
+        "本文はdefault slotで受ける"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "title表示 + slot内容表示の2領域構成"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "header/footerのnamed slotは不要"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "title": "一覧取得の3状態管理",
+    "problem": "users/loading/errorを管理し、onMountedでfetchUsersを呼ぶ構成を書いてください。",
+    "level": "実務",
+    "topic": "onMounted + try/catch",
+    "duration": "18分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "fetchUsersはasync関数で定義する",
+        "onMounted(fetchUsers)で初回取得する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "開始時loading=true, 終了時loading=false"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "ページングやキャッシュは不要"
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "title": "debounce検索 + requestId",
+    "problem": "keyword監視で300ms debounceし、requestIdで競合を防ぐ処理を書いてください。",
+    "level": "実務",
+    "topic": "watch + race condition",
+    "duration": "22分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "debounce時間は300ms固定",
+        "requestId一致時のみ結果反映する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "後発リクエストのみresultsを更新"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "AbortController実装は不要"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "title": "モーダル開閉の局所state",
+    "problem": "openのrefでModalの開閉を制御するコードを書いてください。",
+    "level": "中級",
+    "topic": "local state",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "openはref(false)で管理",
+        "closeイベントでfalseへ戻す"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "Open押下で表示, closeで非表示"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "フォーカストラップ実装は不要"
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "title": "二重送信防止フォーム",
+    "problem": "submitting/success/errorを持つsubmit関数を実装し、finallyで解除してください。",
+    "level": "実務",
+    "topic": "submitting",
+    "duration": "18分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "送信中フラグはsubmittingで一元管理",
+        "finallyで必ずsubmitting=false"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "成功時success=true, 失敗時error文字列設定"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "フィールド単位エラー表示は不要"
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "title": "URLクエリ同期",
+    "problem": "keywordをroute.queryと同期し、watchでrouter.replaceしてください。",
+    "level": "上級",
+    "topic": "useRoute/useRouter",
+    "duration": "14分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "初期値はroute.query.keywordを使う",
+        "更新はrouter.replaceで履歴を汚さない"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "keyword空文字ならqueryから削除(undefined)"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "双方向同期の循環防止ロジックは不要"
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "title": "Pinia Auth Store",
+    "problem": "auth storeでuser/token/loading, isLoggedIn getter, login/logout actionsを実装してください。",
+    "level": "上級",
+    "topic": "pinia",
+    "duration": "20分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "store名はauth固定",
+        "isLoggedInはuserの真偽で判定する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "login後 user/tokenセット, logoutで両方null"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "永続化(localStorage)は不要"
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "title": "ページング取得Composable",
+    "problem": "page/pageSize監視で再取得し、totalPagesをcomputedで返すComposableを書いてください。",
+    "level": "実務",
+    "topic": "watch array",
+    "duration": "20分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "初期page=1,pageSize=20",
+        "watchはimmediate:trueで初回取得する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "total=95,pageSize=20 => totalPages=5"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "サーバーエラー処理は不要"
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "title": "Optimistic UIでtodo追加",
+    "problem": "tempIdを使って先にUI反映し、失敗時にロールバックするaddTodoを書いてください。",
+    "level": "実務",
+    "topic": "optimistic update",
+    "duration": "18分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "tempIdで即時反映し先頭挿入する",
+        "失敗時はtempId項目を除外してロールバック"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "成功時temp行がcreatedへ置換される"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "再試行キューは不要"
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "title": "localStorageへ下書き保存",
+    "problem": "draftをwatchしてlocalStorageへ保存する処理を書いてください。",
+    "level": "中級",
+    "topic": "watch + localStorage",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "storage keyはdraft:profileを使う",
+        "watchで変更ごとに即保存する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "draft入力更新でlocalStorage値も更新"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "保存頻度の間引き(throttle)は不要"
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "title": "ルートガードで認証保護",
+    "problem": "requiresAuthのとき未ログインなら/loginへリダイレクトするbeforeEachを書いてください。",
+    "level": "上級",
+    "topic": "beforeEach",
+    "duration": "14分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "requiresAuth=true かつ未ログインで/loginへ遷移",
+        "redirectにto.fullPathを保持する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "保護ページアクセス時に/login?redirect=...へ"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "ロール権限制御は不要"
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "title": "useFetch Composable",
+    "problem": "data/loading/error/executeを返すuseFetch(fetcher)を実装してください。",
+    "level": "上級",
+    "topic": "composable",
+    "duration": "16分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "execute開始でloading=true,error=null",
+        "finallyでloading=falseに戻す"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "成功時data更新, 失敗時error更新"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "自動再実行(auto fetch)は不要"
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "title": "ログインフォームの基本形",
+    "problem": "reactive form + loading/error + submitを持つログイン処理を実装してください。",
+    "level": "中級",
+    "topic": "form template",
+    "duration": "14分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "formはreactive、loading/errorはrefで管理",
+        "submit内でtry/catch/finallyを使う"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "submit開始でloading=true, 終了でfalse"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "remember meや2FA対応は不要"
+      ]
+    }
+  },
+  {
+    "id": 37,
+    "title": "チェックボックス絞り込みcomputed",
+    "problem": "showDoneの状態でvisibleTasksを切り替えるcomputedを書いてください。",
+    "level": "中級",
+    "topic": "computed filter",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する",
+        "showDone=trueなら全件表示",
+        "falseならdone=falseのみ表示"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る",
+        "showDone=false時に未完了タスクのみvisibleTasksへ残る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外",
+        "並び替えや検索の同時対応は不要"
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "title": "マッチング候補カード一覧",
+    "problem": "distanceとratingからscoreを計算し、候補をscore降順に並べる visibleCandidates を作ってください。",
+    "level": "実務",
+    "topic": "computed + sort",
+    "duration": "16分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 39,
+    "title": "WebSocket接続状態表示",
+    "problem": "WebSocket接続のopen/closeでstatusを更新するコードを書いてください。",
+    "level": "上級",
+    "topic": "onMounted + onBeforeUnmount",
+    "duration": "16分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 40,
+    "title": "支払いフォームのバリデーション",
+    "problem": "cardNumberとcvvを元に canSubmit をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "computed",
+    "duration": "14分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 41,
+    "title": "AIチャット送信中状態",
+    "problem": "sendMessage実行中だけisSending=trueになる処理を書いてください。",
+    "level": "中級",
+    "topic": "ref + try/finally",
+    "duration": "14分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 42,
+    "title": "通知フィード無限スクロール",
+    "problem": "画面下部到達時にloadMoreを呼ぶスクロール監視を実装してください。",
+    "level": "上級",
+    "topic": "onMounted + window scroll",
+    "duration": "18分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 43,
+    "title": "価格表示フォーマッタComposable利用",
+    "problem": "amountを日本円表示する formattedAmount をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed + Intl",
+    "duration": "10分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "title": "2つの検索条件をwatch",
+    "problem": "keywordとstatusのどちらか変更時にも検索を呼ぶwatchを書いてください。",
+    "level": "中級",
+    "topic": "watch array source",
+    "duration": "12分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 45,
+    "title": "Router query 同期のページ番号",
+    "problem": "page ref を route.query.page と同期する処理を書いてください。",
+    "level": "上級",
+    "topic": "useRoute + useRouter + watch",
+    "duration": "16分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 46,
+    "title": "楽観的いいね更新",
+    "problem": "likeCountを先に+1し、失敗したら元に戻す toggleLike を書いてください。",
+    "level": "上級",
+    "topic": "optimistic update",
+    "duration": "16分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 47,
+    "title": "フォームdirty判定",
+    "problem": "initialFormとの比較でisDirtyをcomputedにしてください。",
+    "level": "中級",
+    "topic": "computed + JSON.stringify",
+    "duration": "12分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 48,
+    "title": "モーダルESC閉じ",
+    "problem": "Escapeキー押下でopenをfalseにする処理を実装してください。",
+    "level": "中級",
+    "topic": "keydown event",
+    "duration": "12分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 49,
+    "title": "残り文字数表示",
+    "problem": "maxLengthとmessageから残り文字数remainingをcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 50,
+    "title": "APIエラー分類表示",
+    "problem": "statusコードでerrorTypeを分類するload処理を書いてください。",
+    "level": "上級",
+    "topic": "try/catch",
+    "duration": "14分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 51,
+    "title": "タブUIの現在値管理",
+    "problem": "activeTabをrefで管理し、setTab(tab)で更新してください。",
+    "level": "初級",
+    "topic": "ref",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "title": "高コスト計算のmemo化",
+    "problem": "itemsの合計をtotalCostとしてcomputedにしてください。",
+    "level": "中級",
+    "topic": "computed",
+    "duration": "10分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 53,
+    "title": "ユーザー入力debounce",
+    "problem": "keyword変更を300ms待って検索APIを叩くwatchを書いてください。",
+    "level": "上級",
+    "topic": "watch + setTimeout",
+    "duration": "16分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 54,
+    "title": "ファイルアップロード進捗",
+    "problem": "uploadProgressを0-100で更新する uploadFile(file) の骨組みを書いてください。",
+    "level": "上級",
+    "topic": "ref + XMLHttpRequest",
+    "duration": "18分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 55,
+    "title": "多言語ラベル切替",
+    "problem": "localeに応じてlabelを返す computed を作ってください。",
+    "level": "中級",
+    "topic": "computed + object map",
+    "duration": "12分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 56,
+    "title": "レビュー期限バッジ表示",
+    "problem": "nextReviewAtが現在以前ならisDue=trueを返すcomputedを書いてください。",
+    "level": "中級",
+    "topic": "computed + Date",
+    "duration": "12分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 57,
+    "title": "ステップフォーム遷移",
+    "problem": "currentStepを管理し、isFirst/isLastをcomputedで返す実装を書いてください。",
+    "level": "中級",
+    "topic": "ref + computed",
+    "duration": "12分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "title": "v-showで表示切替",
+    "problem": "isOpenがtrueの時だけ説明文を表示するv-showを書いてください。",
+    "level": "初級",
+    "topic": "v-show",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 59,
+    "title": "クラスの条件バインド",
+    "problem": "isActiveがtrueのときactiveクラスを付けるバインドを書いてください。",
+    "level": "初級",
+    "topic": ":class",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "title": "スタイルの動的バインド",
+    "problem": "sizeに応じてfontSizeを変えるstyleバインドを書いてください。",
+    "level": "中級",
+    "topic": ":style",
+    "duration": "10分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 61,
+    "title": "v-model.number",
+    "problem": "number入力を数値として受けるv-modelを書いてください。",
+    "level": "初級",
+    "topic": "v-model modifier",
+    "duration": "8分",
+    "starDifficulty": 1,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "title": "watch immediate実行",
+    "problem": "keywordのwatchを初回実行するように書いてください。",
+    "level": "中級",
+    "topic": "watch",
+    "duration": "10分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 63,
+    "title": "disabled制御",
+    "problem": "isSubmitting中だけボタンをdisabledにしてください。",
+    "level": "初級",
+    "topic": ":disabled",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 64,
+    "title": "emitsの型付きpayload設計",
+    "problem": "saveイベントで { id, title } をemitする実装を書いてください。",
+    "level": "中級",
+    "topic": "defineEmits",
+    "duration": "10分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 65,
+    "title": "配列件数の表示",
+    "problem": "todosの件数をtodoCountとしてcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 66,
+    "title": "並び替えcomputed",
+    "problem": "productsをprice昇順で返す sortedProducts をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "computed + toSorted",
+    "duration": "12分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 67,
+    "title": "入力文字数カウント",
+    "problem": "name入力の文字数をnameLengthとして表示できるようにしてください。",
+    "level": "初級",
+    "topic": "v-model + computed",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 68,
+    "title": "複数条件でフィルタ",
+    "problem": "keywordとonlyActiveでusersを絞り込むvisibleUsersを作ってください。",
+    "level": "中級",
+    "topic": "computed filter",
+    "duration": "12分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 69,
+    "title": "keydown Enter送信",
+    "problem": "inputでEnter押下時にsubmitを呼ぶテンプレートを書いてください。",
+    "level": "初級",
+    "topic": "@keydown.enter",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 70,
+    "title": "propsの既定値設定",
+    "problem": "titleは必須、sizeは既定値\"md\"のprops定義を書いてください。",
+    "level": "中級",
+    "topic": "defineProps",
+    "duration": "10分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 71,
+    "title": "配列追加ハンドラ",
+    "problem": "itemsにnewItemをpushする addItem(newItem) を実装してください。",
+    "level": "初級",
+    "topic": "ref array",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": "破壊的操作あり",
+    "mutationWarningLevel": "high",
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 72,
+    "title": "入力値trim監視",
+    "problem": "nameの変更時にtrim済み値をconsole出力するwatchを書いてください。",
+    "level": "中級",
+    "topic": "watch",
+    "duration": "10分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 73,
+    "title": "ボタン文言切替",
+    "problem": "isSavingに応じてボタン文言を切り替える submitLabel をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 74,
+    "title": "computed setterで双方向",
+    "problem": "firstName/lastNameからfullNameをgetter/setter付きcomputedで作ってください。",
+    "level": "中級",
+    "topic": "computed getter/setter",
+    "duration": "12分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 75,
+    "title": "checkbox配列バインド",
+    "problem": "選択タグをselectedTags配列へv-modelするテンプレートを書いてください。",
+    "level": "初級",
+    "topic": "v-model array",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 76,
+    "title": "watchで前回値比較",
+    "problem": "countの新旧値をログ出力するwatchを書いてください。",
+    "level": "中級",
+    "topic": "watch oldValue",
+    "duration": "10分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 77,
+    "title": "条件付きemit",
+    "problem": "validがtrueのときだけsubmitイベントをemitする submitIfValid(valid) を作ってください。",
+    "level": "中級",
+    "topic": "defineEmits + if",
+    "duration": "10分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 78,
+    "title": "v-ifとv-else-if分岐",
+    "problem": "scoreに応じてA/B/Cを表示するv-if分岐を書いてください。",
+    "level": "初級",
+    "topic": "v-if",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 79,
+    "title": "複数v-model連動",
+    "problem": "firstName/lastName入力と fullName 表示を作ってください。",
+    "level": "中級",
+    "topic": "v-model",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 80,
+    "title": "条件でplaceholder切替",
+    "problem": "isEmailModeに応じてinputのplaceholderを切り替えてください。",
+    "level": "初級",
+    "topic": "bind attr",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 81,
+    "title": "配列削除ハンドラ",
+    "problem": "id指定でtodosから要素を除外する removeTodo(id) を作ってください。",
+    "level": "中級",
+    "topic": "filter",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 82,
+    "title": "文字列長でバリデーション",
+    "problem": "passwordが8文字以上か返す isStrong をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 83,
+    "title": "ローディング中の二重送信防止",
+    "problem": "isSubmittingがtrueなら早期returnする submit() を書いてください。",
+    "level": "中級",
+    "topic": "if guard",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 84,
+    "title": "ラジオ選択の反映",
+    "problem": "planをラジオのv-modelで選択できるようにしてください。",
+    "level": "初級",
+    "topic": "v-model radio",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "title": "watchで同期保存",
+    "problem": "settingsをwatchしてlocalStorageへ保存してください。",
+    "level": "中級",
+    "topic": "watch + localStorage",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 86,
+    "title": "ボタンの活性制御",
+    "problem": "nameが空なら送信ボタンを無効化してください。",
+    "level": "初級",
+    "topic": ":disabled",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 87,
+    "title": "ページ内タブフィルタ",
+    "problem": "activeTabに応じてitemsを絞る visibleItems をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "computed + filter",
+    "duration": "12分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 88,
+    "title": "フォーム初期化処理",
+    "problem": "reactive formを初期値へ戻す resetForm() を作ってください。",
+    "level": "初級",
+    "topic": "reactive",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": "破壊的操作あり",
+    "mutationWarningLevel": "high",
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 89,
+    "title": "watchEffectでAPI再取得",
+    "problem": "userIdが変わるたびにプロフィール取得するwatchEffectを書いてください。",
+    "level": "中級",
+    "topic": "watchEffect",
+    "duration": "12分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 90,
+    "title": "リスト空状態表示",
+    "problem": "itemsが0件なら「データなし」を表示するテンプレートを書いてください。",
+    "level": "初級",
+    "topic": "v-if",
+    "duration": "8分",
+    "starDifficulty": 2,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 91,
+    "title": "emitで入力確定通知",
+    "problem": "Enterで emit(\"confirm\", value) する onEnter(value) を実装してください。",
+    "level": "中級",
+    "topic": "defineEmits",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 92,
+    "title": "シンプルトグル関数",
+    "problem": "isOpenを反転する toggle() を作ってください。",
+    "level": "初級",
+    "topic": "ref boolean",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 93,
+    "title": "route param監視",
+    "problem": "route.params.id変更時にfetchDetailを呼ぶwatchを書いてください。",
+    "level": "中級",
+    "topic": "useRoute + watch",
+    "duration": "12分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 94,
+    "title": "数値加算ボタン",
+    "problem": "ボタン押下でcountを+5する処理を書いてください。",
+    "level": "初級",
+    "topic": "@click",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 95,
+    "title": "非同期初期化関数",
+    "problem": "onMountedでinit()を呼び、loadingを適切に更新してください。",
+    "level": "中級",
+    "topic": "onMounted async",
+    "duration": "12分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 96,
+    "title": "入力クリアボタン",
+    "problem": "keyword入力を空文字へ戻す clearKeyword() を作ってください。",
+    "level": "初級",
+    "topic": "v-model + click",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 97,
+    "title": "配列先頭へ追加",
+    "problem": "items先頭にnewItemを追加する prependItem(newItem) を作ってください。",
+    "level": "中級",
+    "topic": "spread",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 98,
+    "title": "readonly computed表示",
+    "problem": "priceとqtyからsubtotalをcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 99,
+    "title": "toRefでprops参照",
+    "problem": "propsのkeywordをtoRefで参照しwatchするコードを書いてください。",
+    "level": "中級",
+    "topic": "toRef",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 100,
+    "title": "v-bind省略記法",
+    "problem": "imgのsrcへavatarUrlをバインドしてください。",
+    "level": "初級",
+    "topic": ":prop",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 101,
+    "title": "shallowRefでインスタンス保持",
+    "problem": "chartインスタンスをshallowRefで保持し、onMountedで代入してください。",
+    "level": "中級",
+    "topic": "shallowRef",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 102,
+    "title": "ラベルの大文字表示",
+    "problem": "labelを大文字化して表示する upperLabel をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed + toUpperCase",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 103,
+    "title": "watch停止関数の利用",
+    "problem": "watchを作成し、条件達成時にstop()で監視停止するコードを書いてください。",
+    "level": "中級",
+    "topic": "watch stop",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 104,
+    "title": "v-for index表示",
+    "problem": "v-forでindexとitem名を表示してください。",
+    "level": "初級",
+    "topic": "v-for",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 105,
+    "title": "computedで辞書参照",
+    "problem": "statusコードに応じた文言を返す statusText をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "computed",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 106,
+    "title": "入力上限の表示",
+    "problem": "messageの残り入力可能数をremainingとして表示してください。",
+    "level": "初級",
+    "topic": "maxlength + computed",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 107,
+    "title": "関数propsのデフォルト",
+    "problem": "onSubmit propsを関数型で受け、未指定時は空関数をデフォルトにしてください。",
+    "level": "中級",
+    "topic": "defineProps",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 108,
+    "title": "複数class文字列結合",
+    "problem": "baseClassとsizeClassを配列classバインドで適用してください。",
+    "level": "初級",
+    "topic": ":class array",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 109,
+    "title": "フォーム送信前のtrim整形",
+    "problem": "form.name/emailをtrimしたpayloadをcomputedで作ってください。",
+    "level": "中級",
+    "topic": "computed",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 110,
+    "title": ":keyにindexを使わない例",
+    "problem": "v-forで user.id をkeyにして描画してください。",
+    "level": "初級",
+    "topic": "v-for key",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 111,
+    "title": "複数watchソースのオブジェクト化",
+    "problem": "keyword/page変更時に query オブジェクトを組み立ててログ出力してください。",
+    "level": "中級",
+    "topic": "watch",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 112,
+    "title": "onMountedでフォーカス",
+    "problem": "inputRefをonMountedでfocusしてください。",
+    "level": "初級",
+    "topic": "ref + onMounted",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 113,
+    "title": "emitsの多イベント定義",
+    "problem": "save/cancelの2イベントを定義し、ハンドラでemitしてください。",
+    "level": "中級",
+    "topic": "defineEmits",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 114,
+    "title": "単語数カウント",
+    "problem": "textの単語数をwordCountとしてcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 115,
+    "title": "route変更で再取得",
+    "problem": "route.fullPath変更時にreload()を呼ぶwatchを書いてください。",
+    "level": "中級",
+    "topic": "watch + useRoute",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 116,
+    "title": "数値入力の最小値制御",
+    "problem": "qtyが0未満にならない normalizedQty をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "computed",
+    "duration": "8分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 117,
+    "title": "配列更新の不変操作",
+    "problem": "id一致要素のdoneを切り替える toggleDone(id) を不変更新で作ってください。",
+    "level": "中級",
+    "topic": "map",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 118,
+    "title": "mapで表示用ラベル生成",
+    "problem": "usersから `name (role)` 形式のlabelsをcomputedで作ってください。",
+    "level": "初級",
+    "topic": "map",
+    "duration": "10分",
+    "starDifficulty": 3,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 119,
+    "title": "filterで有効ユーザー抽出",
+    "problem": "usersから active=true のみ返す activeUsers をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "filter",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 120,
+    "title": "findで対象商品取得",
+    "problem": "productsからselectedIdに一致する item をcomputedで返してください。",
+    "level": "初級",
+    "topic": "find",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 121,
+    "title": "reduceで合計金額算出",
+    "problem": "cartの price * qty 合計を totalAmount としてcomputedで作ってください。",
+    "level": "中級",
+    "topic": "reduce",
+    "duration": "12分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 122,
+    "title": "includesでタグ選択判定",
+    "problem": "selectedTagsに\"vue\"が含まれるか返す hasVueTag をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "includes",
+    "duration": "8分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 123,
+    "title": "Object.keys/valuesで統計",
+    "problem": "scoreMapから keys数と合計値を返す stats をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "Object.keys + Object.values",
+    "duration": "12分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 124,
+    "title": "スプレッドで配列更新",
+    "problem": "items末尾にnewItemを追加する addItem(newItem) を実装してください。",
+    "level": "初級",
+    "topic": "...spread",
+    "duration": "8分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 125,
+    "title": "async/await + fetchで初期取得",
+    "problem": "onMountedで /api/me を取得し user に代入する処理を書いてください。",
+    "level": "中級",
+    "topic": "async/await + fetch",
+    "duration": "12分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 126,
+    "title": "JSON.stringifyで保存",
+    "problem": "formをJSON文字列化してdraftJsonを作るcomputedを書いてください。",
+    "level": "初級",
+    "topic": "JSON.stringify",
+    "duration": "8分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 127,
+    "title": "JSON.parseで復元",
+    "problem": "文字列stateJsonをparseし、失敗時は空オブジェクトを返す parseState(stateJson) を作ってください。",
+    "level": "中級",
+    "topic": "JSON.parse",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 128,
+    "title": "mapでパンくず生成",
+    "problem": "pathSegmentsからパンくず表示用の \"index: label\" 文字列配列を作る breadcrumbs をcomputedで実装してください。",
+    "level": "初級",
+    "topic": "map",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 129,
+    "title": "filterで未読通知のみ表示",
+    "problem": "notificationsから read が false の通知だけ返す unreadNotifications をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "filter",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 130,
+    "title": "findで優先配送先を決定",
+    "problem": "addressesから isPrimary が true の配送先を返す primaryAddress をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "find",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 131,
+    "title": "reduceでフォーム入力率を計算",
+    "problem": "formFieldsのうち value が空でない項目数を使って completionRate(%) を返すcomputedを作ってください。",
+    "level": "中級",
+    "topic": "reduce",
+    "duration": "12分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 132,
+    "title": "includesで機能フラグ判定",
+    "problem": "enabledFeaturesに \"beta-dashboard\" が含まれるか返す hasBetaDashboard をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "includes",
+    "duration": "8分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 133,
+    "title": "Object.keysでクエリ文字列化",
+    "problem": "queryオブジェクトを \"k=v&...\" 形式にする queryString をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "Object.keys",
+    "duration": "12分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 134,
+    "title": "Object.valuesで合計金額表示",
+    "problem": "priceMapの値を合計する totalPrice をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "Object.values",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 135,
+    "title": "スプレッドでフォーム初期化",
+    "problem": "defaultFormとsavedDraftをマージしてform初期値を作る初期化処理を書いてください。savedDraftがnullならdefaultFormのみ使用します。",
+    "level": "中級",
+    "topic": "...spread",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 136,
+    "title": "async/await + fetchで選択肢取得",
+    "problem": "onMountedで /api/categories を取得して categories に格納する処理を書いてください。",
+    "level": "初級",
+    "topic": "async/await + fetch",
+    "duration": "12分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 137,
+    "title": "JSON.parse/stringifyでローカル下書き更新",
+    "problem": "draftJson文字列とpatchを受けてマージしたJSON文字列を返す mergeDraftJson(draftJson, patch) を作ってください。parse失敗時はpatchのみを返します。",
+    "level": "中級",
+    "topic": "JSON.parse + JSON.stringify",
+    "duration": "12分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 138,
+    "title": "mapでプロフィール表示名生成",
+    "problem": "membersから `name (@account)` 形式を作る displayNames をcomputedで実装してください。",
+    "level": "初級",
+    "topic": "map",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 139,
+    "title": "mapで検索候補フォーマット",
+    "problem": "suggestionsを `{ id, text }` へ変換する normalizedSuggestions をcomputedで作ってください。textはlabelを使います。",
+    "level": "中級",
+    "topic": "map",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 140,
+    "title": "filterで在庫あり商品だけ表示",
+    "problem": "productsから stock > 0 のみ返す inStockProducts をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "filter",
+    "duration": "8分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 141,
+    "title": "filterで当月予定のみ抽出",
+    "problem": "eventsから month が currentMonth と一致する要素だけ返す monthlyEvents をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "filter",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 142,
+    "title": "findで選択中プランを取得",
+    "problem": "plansから selectedPlanId に一致する要素を返す selectedPlan をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "find",
+    "duration": "8分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 143,
+    "title": "findで最初のエラーフィールド取得",
+    "problem": "fields配列から error が true の最初の要素を返す firstErrorField をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "find",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 144,
+    "title": "reduceで買い物合計を算出",
+    "problem": "cartの qty 合計を返す totalQty をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "reduce",
+    "duration": "10分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 145,
+    "title": "reduceでカテゴリ別売上集計",
+    "problem": "sales配列を category ごとの売上合計オブジェクトにする salesByCategory をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "reduce",
+    "duration": "12分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 146,
+    "title": "includesで選択済み判定",
+    "problem": "selectedIdsに currentId が含まれるか返す isSelected をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "includes",
+    "duration": "8分",
+    "starDifficulty": 4,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 147,
+    "title": "includesで入力NGワード判定",
+    "problem": "textにblockedWordsのいずれかが含まれるか返す hasBlockedWord をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "includes",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 148,
+    "title": "Object.keysで入力項目数を表示",
+    "problem": "formオブジェクトのキー数を返す fieldCount をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "Object.keys",
+    "duration": "8分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 149,
+    "title": "Object.keysで変更キー一覧作成",
+    "problem": "beforeとafterを比較し、値が変わったキー配列を返す changedKeys をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "Object.keys",
+    "duration": "12分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 150,
+    "title": "Object.valuesで通知総数を算出",
+    "problem": "countByTypeオブジェクトの値合計を返す totalNotifications をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "Object.values",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 151,
+    "title": "Object.valuesで最大値を取得",
+    "problem": "scoreMapから最大値を返す maxScore をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "Object.values",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 152,
+    "title": "スプレッドでタグ追加",
+    "problem": "tagsの末尾にnewTagを追加する addTag(newTag) を実装してください。",
+    "level": "初級",
+    "topic": "...spread",
+    "duration": "8分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 153,
+    "title": "スプレッドでユーザー更新",
+    "problem": "userオブジェクトのnameのみ更新する updateName(nextName) を実装してください。",
+    "level": "中級",
+    "topic": "...spread",
+    "duration": "12分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 154,
+    "title": "async/awaitでお知らせ一覧取得",
+    "problem": "onMountedで /api/notices を取得し notices に代入してください。",
+    "level": "初級",
+    "topic": "async/await + fetch",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 155,
+    "title": "async/awaitで送信中状態を管理",
+    "problem": "submit(payload)でisSubmittingをtrueにし、POST完了後falseへ戻す処理を書いてください。",
+    "level": "中級",
+    "topic": "async/await + fetch",
+    "duration": "12分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 156,
+    "title": "JSON.stringifyで検索条件を保存",
+    "problem": "filtersをJSON文字列化して filterJson をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "JSON.stringify",
+    "duration": "8分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 157,
+    "title": "JSON.parseでドラフト復元",
+    "problem": "jsonTextをparseしてフォーム初期値へ使う parseDraft(jsonText) を作ってください。失敗時は空オブジェクトです。",
+    "level": "中級",
+    "topic": "JSON.parse",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 158,
+    "title": "map+includesで選択フラグ付与",
+    "problem": "itemsとselectedIdsから selected を付与した decoratedItems をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "map + includes",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 159,
+    "title": "filter+mapで公開ID一覧化",
+    "problem": "postsから公開済みのみ抽出しid配列を返す publishedIds をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "filter + map",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 160,
+    "title": "reduce+Object.valuesで平均計算",
+    "problem": "scoreMapの平均を返す averageScore をcomputedで作ってください。件数0なら0です。",
+    "level": "初級",
+    "topic": "reduce + Object.values",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 161,
+    "title": "Object.keys+reduceで空欄項目抽出",
+    "problem": "formから空文字のキーを配列で返す blankKeys をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "Object.keys + reduce",
+    "duration": "12分",
+    "starDifficulty": 5,
+    "mutationWarningShort": "破壊的操作あり",
+    "mutationWarningLevel": "high",
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 162,
+    "title": "async/awaitで単一データ取得",
+    "problem": "loadUser(id) を作り、`/api/users/:id` を取得して user に代入してください。",
+    "level": "初級",
+    "topic": "async/await + fetch",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 163,
+    "title": "Promise.allで2リソース初期読込",
+    "problem": "onMountedで `/api/profile` と `/api/settings` を並列取得し、profile/settingsへ代入してください。",
+    "level": "中級",
+    "topic": "async/await + fetch",
+    "duration": "12分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 164,
+    "title": "JSON.parse+includesでお気に入り判定",
+    "problem": "favoritesJson文字列とtargetIdから含有判定する isFavorite をcomputedで作ってください。parse失敗時はfalseです。",
+    "level": "初級",
+    "topic": "JSON.parse + includes",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 165,
+    "title": "Object.keysでクエリ未入力判定",
+    "problem": "queryオブジェクトが全て空文字ならtrueを返す isQueryEmpty をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "Object.keys",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 166,
+    "title": "スプレッドで通知設定更新",
+    "problem": "prefs.notification.sound を切り替える toggleSound() を実装してください。",
+    "level": "初級",
+    "topic": "...spread",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 167,
+    "title": "JSON.stringifyで送信ペイロード作成",
+    "problem": "formとmetaをまとめてJSON文字列化する buildSubmitBody(form, meta) を作ってください。",
+    "level": "中級",
+    "topic": "JSON.stringify",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 168,
+    "title": "Regexで数字入力のみ許可判定",
+    "problem": "inputTextが数字のみか判定する isDigits をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "RegExp",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 169,
+    "title": "メール形式エラー表示",
+    "problem": "emailが不正なら true を返す hasEmailError をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "RegExp validation",
+    "duration": "12分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 170,
+    "title": "電話番号フォーマット検証",
+    "problem": "phoneが 090-1234-5678 または 09012345678 形式か判定する isValidPhone をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "RegExp validation",
+    "duration": "12分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 171,
+    "title": "郵便番号入力の検証",
+    "problem": "zipが 123-4567 形式か判定する isValidZip をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "RegExp validation",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 172,
+    "title": "パスワード強度メーター判定",
+    "problem": "passwordが英字+数字を含む8文字以上なら \"strong\"、それ以外は \"weak\" を返す passwordStrength をcomputedで作ってください。",
+    "level": "中級",
+    "topic": "RegExp validation",
+    "duration": "14分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 173,
+    "title": "URL入力の形式判定",
+    "problem": "urlがhttp/httpsで始まるか判定する isHttpUrl をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "RegExp",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 174,
+    "title": "数字以外を除去して整形",
+    "problem": "rawPhoneから数字以外を除去した normalizedPhone をcomputedで作ってください。",
+    "level": "初級",
+    "topic": "RegExp replace",
+    "duration": "10分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 175,
+    "title": "フォームのRegex一括バリデーション",
+    "problem": "form(email, phone, zip)を検証して、エラーキー配列を返す validationErrors をcomputedで作ってください。",
+    "level": "実務",
+    "topic": "RegExp form validation",
+    "duration": "16分",
+    "starDifficulty": 5,
+    "mutationWarningShort": "破壊的操作あり",
+    "mutationWarningLevel": "high",
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 176,
+    "title": "入力欄の即時エラーメッセージ",
+    "problem": "usernameが英数字4〜12文字でなければメッセージを返す usernameError をcomputedで作ってください。正しければ空文字を返します。",
+    "level": "中級",
+    "topic": "RegExp UI validation",
+    "duration": "14分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  },
+  {
+    "id": 177,
+    "title": "禁止語チェック（大文字小文字無視）",
+    "problem": "commentに spam または scam が含まれるか返す hasBlockedWord をcomputedで作ってください。大文字小文字は区別しません。",
+    "level": "実務",
+    "topic": "RegExp flags",
+    "duration": "12分",
+    "starDifficulty": 5,
+    "mutationWarningShort": null,
+    "mutationWarningLevel": null,
+    "spec": {
+      "assumptions": [
+        "問題文にない値は starter / answer の初期値を採用する",
+        "リアクティブ更新は Vue の標準API（ref/reactive/computed/watch）で実装する"
+      ],
+      "ioExamples": [
+        "チェックボタン押下時に必須トークンが確認できる状態にする",
+        "リセット後は starter と同じ状態へ戻る"
+      ],
+      "outOfScope": [
+        "UIデザインの作り込みは評価対象外"
+      ]
+    }
+  }
+]
