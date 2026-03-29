@@ -1,0 +1,6 @@
+# Bun lockfile は常に LF を使用（クロスプラットフォーム対応）
+bun.lock text eol=lf
+
+# Node.js 互換（念のため）
+package.json text eol=lf
+package-lock.json text eol=lf
