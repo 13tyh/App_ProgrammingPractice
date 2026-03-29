@@ -44,6 +44,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # npmのoptional dependency解決不整合対策（rolldownネイティブバインディング）
+      - name: Ensure rolldown Linux binding
+        if: runner.os == 'Linux'
+        run: |
+          VERSION=$(node -p "require('./node_modules/rolldown/package.json').optionalDependencies['@rolldown/binding-linux-x64-gnu']")
+          npm install --no-save "@rolldown/binding-linux-x64-gnu@${VERSION}"
+
       # コンポーネント単体テスト
       - name: Run component tests
         run: npm run test:component
@@ -84,6 +91,13 @@ jobs:
       # ビルドのための依存関係インストール
       - name: Install dependencies
         run: npm ci
+
+      # npmのoptional dependency解決不整合対策（rolldownネイティブバインディング）
+      - name: Ensure rolldown Linux binding
+        if: runner.os == 'Linux'
+        run: |
+          VERSION=$(node -p "require('./node_modules/rolldown/package.json').optionalDependencies['@rolldown/binding-linux-x64-gnu']")
+          npm install --no-save "@rolldown/binding-linux-x64-gnu@${VERSION}"
 
       # リポジトリ配下公開のため base path を指定してビルド
       - name: Build for GitHub Pages
