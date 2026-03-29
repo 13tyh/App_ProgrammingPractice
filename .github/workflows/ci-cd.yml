@@ -33,27 +33,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Node.jsランタイムをセットアップ
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      # Bunランタイムをセットアップ
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: "22"
-          cache: npm
+          bun-version: "1.3.11"
 
-      # lockfile(package-lock.json)に基づいて依存関係を再現インストール
+      # 依存関係をインストール
       - name: Install dependencies
-        run: npm ci
-
-      # npmのoptional dependency解決不整合対策（rolldownネイティブバインディング）
-      - name: Ensure rolldown Linux binding
-        if: runner.os == 'Linux'
-        run: |
-          VERSION=$(node -p "require('./node_modules/rolldown/package.json').optionalDependencies['@rolldown/binding-linux-x64-gnu']")
-          npm install --no-save "@rolldown/binding-linux-x64-gnu@${VERSION}"
+        run: bun install
 
       # 本番ビルドが通るか確認
       - name: Build application
-        run: npm run build
+        run: bun run build
 
   # CD: mainへのpush時のみ GitHub Pages へデプロイ
   deploy:
@@ -69,12 +61,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Node.jsランタイムをセットアップ
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      # Bunランタイムをセットアップ
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: "22"
-          cache: npm
+          bun-version: "1.3.11"
 
       # GitHub Pages デプロイ用の内部設定
       - name: Setup Pages
@@ -82,20 +73,13 @@ jobs:
 
       # ビルドのための依存関係インストール
       - name: Install dependencies
-        run: npm ci
-
-      # npmのoptional dependency解決不整合対策（rolldownネイティブバインディング）
-      - name: Ensure rolldown Linux binding
-        if: runner.os == 'Linux'
-        run: |
-          VERSION=$(node -p "require('./node_modules/rolldown/package.json').optionalDependencies['@rolldown/binding-linux-x64-gnu']")
-          npm install --no-save "@rolldown/binding-linux-x64-gnu@${VERSION}"
+        run: bun install
 
       # リポジトリ配下公開のため base path を指定してビルド
       - name: Build for GitHub Pages
         env:
           VITE_BASE_PATH: /App_ProgrammingPractice/
-        run: npm run build
+        run: bun run build
 
       # SPA直接アクセス対策: 404にもindex.htmlを配置
       - name: Add SPA fallback
