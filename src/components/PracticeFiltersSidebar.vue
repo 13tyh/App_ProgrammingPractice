@@ -445,4 +445,39 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onGlobalKeydown))
   }
 }
 
+@media (max-width: 18.75rem) {
+  .sidebar {
+    padding: 0.5rem;
+  }
+
+  .summary-value {
+    font-size: 1.25rem;
+  }
+
+  .goal-ring-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .goal-ring {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 0.6875rem;
+  }
+
+  .goal-ring::after {
+    inset: 0.25rem;
+  }
+
+  .daily-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .input-wrap input,
+  .level-button,
+  .clear-button {
+    font-size: 0.75rem;
+  }
+}
+
 </style>

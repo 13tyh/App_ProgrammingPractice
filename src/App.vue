@@ -1,3 +1,26 @@
+<script setup>
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const isNavOpen = ref(false)
+
+watch(
+  () => route.fullPath,
+  () => {
+    isNavOpen.value = false
+  }
+)
+
+const toggleNav = () => {
+  isNavOpen.value = !isNavOpen.value
+}
+
+const closeNav = () => {
+  isNavOpen.value = false
+}
+</script>
+
 <template>
   <div class="app-shell">
     <header class="app-header">
@@ -5,9 +28,22 @@
         <p class="brand">Code Dojo</p>
       </div>
 
-      <nav class="course-nav">
-        <RouterLink to="/js-practice">JavaScript コース</RouterLink>
-        <RouterLink to="/vue-practice">Vue コース</RouterLink>
+      <button
+        type="button"
+        class="hamburger-button"
+        :aria-expanded="isNavOpen"
+        aria-controls="course-nav"
+        aria-label="ナビゲーションを開閉"
+        @click="toggleNav"
+      >
+        <span class="hamburger-line" />
+        <span class="hamburger-line" />
+        <span class="hamburger-line" />
+      </button>
+
+      <nav id="course-nav" class="course-nav" :class="{ open: isNavOpen }">
+        <RouterLink to="/js-practice" @click="closeNav">JavaScript コース</RouterLink>
+        <RouterLink to="/vue-practice" @click="closeNav">Vue コース</RouterLink>
       </nav>
 
     </header>
@@ -48,6 +84,28 @@
   letter-spacing: 0.02em;
 }
 
+.hamburger-button {
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+  border: 0.0625rem solid #dcdde3;
+  background: #ffffff;
+  color: var(--text-main);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1875rem;
+  flex-direction: column;
+}
+
+.hamburger-line {
+  width: 1rem;
+  height: 0.125rem;
+  border-radius: 0.125rem;
+  background: currentColor;
+}
+
 .course-nav {
   display: flex;
   gap: var(--space-2);
@@ -82,16 +140,28 @@
   padding: var(--space-3) 0.375rem 0.875rem;
 }
 
-@media (max-width: 56.25rem) {
+@media (max-width: 48rem) {
   .app-header {
-    grid-template-columns: 1fr;
-    justify-items: start;
+    grid-template-columns: 1fr auto;
+    align-items: center;
     padding: var(--space-3);
   }
 
+  .hamburger-button {
+    display: inline-flex;
+  }
+
   .course-nav {
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    width: 100%;
+    grid-column: 1 / -1;
+    margin-top: var(--space-2);
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    justify-content: stretch;
+  }
+
+  .course-nav.open {
+    display: grid;
   }
 }
 
@@ -106,8 +176,6 @@
   }
 
   .course-nav {
-    width: 100%;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.375rem;
   }
@@ -136,6 +204,27 @@
     min-height: 2.5rem;
     display: grid;
     place-items: center;
+  }
+}
+
+@media (max-width: 18.75rem) {
+  .app-header {
+    padding: 0.375rem;
+    gap: 0.375rem;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .course-nav a {
+    min-height: 2.25rem;
+    padding: 0.375rem;
+    font-size: 0.75rem;
+  }
+
+  .app-main {
+    padding: 0.375rem 0.0625rem 0.5rem;
   }
 }
 </style>

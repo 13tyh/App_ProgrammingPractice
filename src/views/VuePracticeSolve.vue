@@ -616,4 +616,35 @@ const completeAndBack = () => {
     min-height: 22.5rem;
   }
 }
+
+@media (max-width: 18.75rem) {
+  .page {
+    padding: 0.375rem;
+  }
+
+  .panel {
+    padding: 0.5rem;
+  }
+
+  .problem,
+  .retry-note,
+  .hint,
+  .answer {
+    font-size: 0.6875rem;
+  }
+
+  .focus-toggle {
+    min-height: 2.25rem;
+    font-size: 0.75rem;
+  }
+
+  :deep(.cm-editor) {
+    min-height: 18rem;
+    font-size: 0.75rem;
+  }
+
+  .editor-loading {
+    height: 18rem;
+  }
+}
 </style>

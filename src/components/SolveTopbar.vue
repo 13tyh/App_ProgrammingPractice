@@ -108,4 +108,24 @@ const emit = defineEmits(['complete'])
     font-size: 0.625rem;
   }
 }
+
+@media (max-width: 18.75rem) {
+  .topbar {
+    padding: 0.375rem;
+  }
+
+  .back-link {
+    font-size: 0.75rem;
+  }
+
+  .title-wrap h1 {
+    font-size: 1.0625rem;
+  }
+
+  .done-button {
+    min-height: 2.375rem;
+    font-size: 0.8125rem;
+    padding: 0.5rem;
+  }
+}
 </style>
