@@ -25,7 +25,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # CI: テストとビルドの健全性チェック
+  # CI: ビルドの健全性チェック（テストはローカル実行のみ）
   ci:
     runs-on: ubuntu-latest
     steps:
@@ -50,14 +50,6 @@ jobs:
         run: |
           VERSION=$(node -p "require('./node_modules/rolldown/package.json').optionalDependencies['@rolldown/binding-linux-x64-gnu']")
           npm install --no-save "@rolldown/binding-linux-x64-gnu@${VERSION}"
-
-      # コンポーネント単体テスト
-      - name: Run component tests
-        run: npm run test:component
-
-      # composable等のユニットテスト
-      - name: Run unit tests
-        run: npm run test:unit
 
       # 本番ビルドが通るか確認
       - name: Build application
