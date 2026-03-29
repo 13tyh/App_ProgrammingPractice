@@ -1,0 +1,101 @@
+name: CI/CD
+
+# 実行トリガー:
+# - PR作成/更新時にCIを実行
+# - mainブランチへのpush時にCI + CDを実行
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+# ワークフローで必要な権限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時デプロイを防止（新しい実行を優先）
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  # CI: テストとビルドの健全性チェック
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      # リポジトリのコードを取得
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Bunランタイムをセットアップ
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      # lockfileに基づいて依存関係を再現インストール
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      # コンポーネント単体テスト
+      - name: Run component tests
+        run: bun run test:component
+
+      # composable等のユニットテスト
+      - name: Run unit tests
+        run: bun run test:unit
+
+      # 本番ビルドが通るか確認
+      - name: Build application
+        run: bun run build
+
+  # CD: mainへのpush時のみ GitHub Pages へデプロイ
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # CIが成功したときだけデプロイ
+    needs: ci
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # リポジトリのコードを取得
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Bunランタイムをセットアップ
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      # GitHub Pages デプロイ用の内部設定
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # ビルドのための依存関係インストール
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      # リポジトリ配下公開のため base path を指定してビルド
+      - name: Build for GitHub Pages
+        env:
+          VITE_BASE_PATH: /App_ProgrammingPractice/
+        run: bun run build
+
+      # SPA直接アクセス対策: 404にもindex.htmlを配置
+      - name: Add SPA fallback
+        run: cp dist/index.html dist/404.html
+
+      # distをPagesアーティファクトとしてアップロード
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      # GitHub Pagesへ本番デプロイ
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
