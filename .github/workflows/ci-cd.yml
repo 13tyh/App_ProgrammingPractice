@@ -37,7 +37,7 @@ jobs:
 
       # lockfileに基づいて依存関係を再現インストール
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: bun install
 
       # コンポーネント単体テスト
       - name: Run component tests
@@ -77,7 +77,7 @@ jobs:
 
       # ビルドのための依存関係インストール
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: bun install
 
       # リポジトリ配下公開のため base path を指定してビルド
       - name: Build for GitHub Pages
